@@ -11,11 +11,9 @@ import UIKit
 class MainViewController: UIViewController {
     
     override func viewDidLoad() {
-        API.manager.addSubscriptionWithName("test")
-        API.manager.delegate = self
+        API.manager.callMethodWithName("test", parameters: ["foo", "bar"]) { (response, error) -> Void in
+            
+        }
     }
     
 }
-
-
-extension MainViewController: m
