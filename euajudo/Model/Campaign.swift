@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /**
     Campaing model.
 
@@ -16,13 +15,29 @@ import Foundation
     :param: description Campaing description.
     :param: createdAt Campaing creation date.
     :param: mainMedia Dictionary with main media values (type, url and videoUrl if is a video)
- */
+*/
 
 class Campaign {
     
     var name: String!
     var description: String!
     var createdAt: NSDate!
-    var mainMedia: [String: AnyObject]!
+    var mainMedia: Media!
+    
+    static func sampleCampaigns() -> [Campaign] {
+        var campaigns = [Campaign]()
+        
+        for i in 0..<10 {
+            let campaign = Campaign()
+            campaign.name = "Campanha \(i)"
+            campaign.description = "Descrição da campanha \(i)"
+            campaign.createdAt = NSDate()
+            campaign.mainMedia = Media()
+            
+            campaigns.append(campaign)
+        }
+    
+        return campaigns
+    }
 
 }

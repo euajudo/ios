@@ -51,11 +51,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'InflectorKit.framework'
   install_framework 'Meteor.framework'
   install_framework 'PocketSocket.framework'
+  install_framework 'SDWebImage.framework'
   install_framework 'SimpleKeychain.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'InflectorKit.framework'
   install_framework 'Meteor.framework'
   install_framework 'PocketSocket.framework'
+  install_framework 'SDWebImage.framework'
   install_framework 'SimpleKeychain.framework'
 fi
