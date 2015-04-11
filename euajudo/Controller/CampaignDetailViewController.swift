@@ -11,7 +11,7 @@ import UIKit
 
 class CampaignDetailViewController: UIViewController {
     
-    var campaign: Campaign?
+    var campaign: Campaign!
 
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelReceiverName: UILabel!
@@ -25,11 +25,14 @@ class CampaignDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTitle.text = "Lorem ipsum Deserunt adipisicing ad irure dolor in qui laborum Duis minim culpa velit ex sed dolore."
+        labelTitle.text = campaign.name
+        labelReceiverName.text = "nome do usuário"
+        labelDescription.text = campaign.description
         
-        labelReceiverName.text = "Lorem ipsum Deserunt adipisicing ad irure dolor in qui laborum Duis minim culpa velit ex sed dolore."
-        
-        labelDescription.text = "Lorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute.\n\nLorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute.\n\nLorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute."
+        unowned let weakSelf = self
+        campaign.mainMedia.image { (image) -> Void in
+            weakSelf.imageView.image = image
+        }
     }
     
     override func viewDidLayoutSubviews() {

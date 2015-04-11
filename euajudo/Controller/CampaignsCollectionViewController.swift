@@ -36,6 +36,14 @@ class CampaignsCollectionViewController: UICollectionViewController {
         reloadCampaigns()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Campaign" {
+            if let campaign = sender as? Campaign, controller = segue.destinationViewController as? CampaignDetailViewController {
+                controller.campaign = campaign
+            }
+        }
+    }
+    
     
     // MARK: Data
     
@@ -79,6 +87,18 @@ extension CampaignsCollectionViewController: UICollectionViewDataSource {
         cell.updateInformations()
         
         return cell
+    }
+    
+}
+
+
+// MARK: UICollectionViewDelegate
+
+extension CampaignsCollectionViewController: UICollectionViewDelegate {
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let campaign = campaigns[indexPath.row]
+        self.performSegueWithIdentifier("Campaign", sender: campaign)
     }
     
 }
