@@ -11,7 +11,16 @@ import UIKit
 class CampaignsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.reloadCampaigns()
+    }
+    
+    func reloadCampaigns() {
+        self.refreshControl?.beginRefreshing()
         
+        API.sharedInstance.allCampaings { (response, error) -> Void in
+            self.refreshControl?.endRefreshing()
+        }
     }
     
 }
