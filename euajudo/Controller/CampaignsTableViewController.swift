@@ -19,6 +19,8 @@ class CampaignsTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 90.0
         
         self.reloadCampaigns()
+        
+        self.performSegueWithIdentifier("Campaign", sender: nil)
     }
     
     func reloadCampaigns() {
