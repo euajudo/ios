@@ -16,6 +16,7 @@
 		41A535C31AD97835008B9F6F /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsViewController.swift */; };
 		41A535C51AD9783D008B9F6F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C41AD9783D008B9F6F /* API.swift */; };
 		41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C71AD978FC008B9F6F /* Campaign.swift */; };
+		41A535CA1AD97B31008B9F6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C91AD97B31008B9F6F /* User.swift */; };
 		9ED78EFCE71D4EF4940EA503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3369FED058ECE7A510AA13 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		41A535C21AD97835008B9F6F /* CampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsViewController.swift; path = Controller/CampaignsViewController.swift; sourceTree = "<group>"; };
 		41A535C41AD9783D008B9F6F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
 		41A535C71AD978FC008B9F6F /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Campaign.swift; path = Model/Campaign.swift; sourceTree = "<group>"; };
+		41A535C91AD97B31008B9F6F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		AA3369FED058ECE7A510AA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				41A535C71AD978FC008B9F6F /* Campaign.swift */,
+				41A535C91AD97B31008B9F6F /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			files = (
 				41A535C31AD97835008B9F6F /* CampaignsViewController.swift in Sources */,
 				418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */,
+				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 				41A535C11AD975B6008B9F6F /* APICampaigns.swift in Sources */,

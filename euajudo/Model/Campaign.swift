@@ -12,10 +12,10 @@ import Foundation
 /**
     Campaing model.
 
-    @param name Campaign name.
-    @param description Campaing description.
-    @param createdAt Campaing creation date.
-    @param mainMedia Dictionary with main media values (type, url and videoUrl if is a video)
+    :param: name Campaign name.
+    :param: description Campaing description.
+    :param: createdAt Campaing creation date.
+    :param: mainMedia Dictionary with main media values (type, url and videoUrl if is a video)
  */
 
 class Campaign {
