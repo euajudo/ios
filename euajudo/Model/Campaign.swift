@@ -23,21 +23,12 @@ class Campaign {
     var description: String!
     var createdAt: NSDate!
     var mainMedia: Media!
-    
-    static func sampleCampaigns() -> [Campaign] {
-        var campaigns = [Campaign]()
-        
-        for i in 0..<10 {
-            let campaign = Campaign()
-            campaign.name = "Campanha \(i)"
-            campaign.description = "Descrição da campanha \(i)"
-            campaign.createdAt = NSDate()
-            campaign.mainMedia = Media()
-            
-            campaigns.append(campaign)
-        }
-    
-        return campaigns
+
+    init(dict: [String: AnyObject]) {
+        self.name = dict["name"] as! String
+        self.description = dict["description"] as! String
+        self.createdAt = NSDate()
+        self.mainMedia = Media()
     }
 
 }

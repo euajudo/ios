@@ -10,7 +10,7 @@ import UIKit
 
 class CampaignsTableViewController: UITableViewController {
 
-    var campaigns: [Campaign]!
+    var campaigns = [Campaign]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,23 @@ class CampaignsTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 90.0
         
-        self.campaigns = Campaign.sampleCampaigns()
+        self.reloadCampaigns()
+    }
+    
+    func reloadCampaigns() {
+        self.refreshControl?.beginRefreshing()
+        
+        API.sharedInstance.allCampaings { (response, error) -> Void in
+            if let campaigns = response as? [[String: AnyObject]] {
+                for obj in campaigns {
+                    let campaign = Campaign(dict: obj)
+                    
+                    self.campaigns.append(campaign)
+                }
+            }
+        
+            self.refreshControl?.endRefreshing()
+        }
     }
     
 }
@@ -44,7 +60,6 @@ extension CampaignsTableViewController: UITableViewDataSource {
         
         campaign.mainMedia.image({ (image) -> Void in
             campaignImage.image = image
-            return
         })
         
         name.text = campaign.name
