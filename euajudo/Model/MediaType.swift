@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+/**
+    Media type model.
+
+    :param: Image Member value for image type.
+    :param: Video Member value for video type.
+*/
+
+enum MediaType: String {
+    
+    case Image = "image",
+         Video = "video"
+    
+}
