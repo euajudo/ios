@@ -13,4 +13,11 @@ class CampaignDetailViewController: UIViewController {
     
     var campaign: Campaign?
 
+
+    @IBAction func buttonSharePressed(sender: AnyObject) {
+        let objectsToShare = [textToShare, myWebsite]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        
+        self.presentViewController(activityVC, animated: true, completion: nil)
+    }
 }

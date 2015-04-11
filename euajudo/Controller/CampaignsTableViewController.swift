@@ -13,6 +13,8 @@ class CampaignsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reloadCampaigns()
+        
+        self.performSegueWithIdentifier("Campaign", sender: nil)
     }
     
     func reloadCampaigns() {

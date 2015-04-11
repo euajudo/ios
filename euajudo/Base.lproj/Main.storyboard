@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZHZ-a3-SPd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -30,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
-                        <segue destination="564-cH-uAu" kind="show" id="uKN-cA-Ccd"/>
+                        <segue destination="564-cH-uAu" kind="show" identifier="Campaign" id="uKN-cA-Ccd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmv-Hy-824" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,8 +49,77 @@
                     <view key="view" contentMode="scaleToFill" id="HW6-1H-8lu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-IE-ohD">
+                                <rect key="frame" x="0.0" y="66" width="600" height="534"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empresa responsável" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eV-LI-DyD">
+                                        <rect key="frame" x="19" y="37" width="562" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="41Q-9c-Ghe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Miyagi" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-7Q-1as">
+                                        <rect key="frame" x="0.0" y="66" width="600" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="Hs9-Mb-Rad"/>
+                                            <constraint firstAttribute="width" secondItem="mWL-7Q-1as" secondAttribute="height" multiplier="3:2" id="PCP-ew-ql0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-iJ-zif">
+                                        <rect key="frame" x="19" y="479" width="562" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="a7F-Sw-790"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do projeto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHv-l6-cKD">
+                                        <rect key="frame" x="19" y="15" width="562" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="9SK-Xy-9Wc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VHv-l6-cKD" secondAttribute="trailing" constant="19" id="9Q9-cW-5qu"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKk-iJ-zif" secondAttribute="trailing" constant="19" id="Exw-AJ-hji"/>
+                                    <constraint firstAttribute="trailing" secondItem="9eV-LI-DyD" secondAttribute="trailing" constant="19" id="H6D-FG-BIL"/>
+                                    <constraint firstItem="VHv-l6-cKD" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="top" constant="15" id="KY5-JN-R9D"/>
+                                    <constraint firstAttribute="trailing" secondItem="mWL-7Q-1as" secondAttribute="trailing" id="RqY-Cv-a4E"/>
+                                    <constraint firstItem="dKk-iJ-zif" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" constant="19" id="Tc9-TL-HM2"/>
+                                    <constraint firstItem="mWL-7Q-1as" firstAttribute="top" secondItem="9eV-LI-DyD" secondAttribute="bottom" constant="8" id="aax-NJ-38J"/>
+                                    <constraint firstItem="VHv-l6-cKD" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" constant="19" id="eLB-dP-A8L"/>
+                                    <constraint firstItem="9eV-LI-DyD" firstAttribute="top" secondItem="VHv-l6-cKD" secondAttribute="bottom" constant="1" id="ei4-co-Gk9"/>
+                                    <constraint firstItem="mWL-7Q-1as" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" id="juu-Ua-2wX"/>
+                                    <constraint firstItem="dKk-iJ-zif" firstAttribute="top" secondItem="mWL-7Q-1as" secondAttribute="bottom" constant="13" id="lw8-2b-HgV"/>
+                                    <constraint firstItem="9eV-LI-DyD" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" constant="19" id="p8s-Wa-anA"/>
+                                    <constraint firstAttribute="bottom" secondItem="dKk-iJ-zif" secondAttribute="bottom" constant="32" id="twO-WW-7ea"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dnf-IE-ohD" secondAttribute="trailing" id="Igl-sk-ZFc"/>
+                            <constraint firstItem="Dnf-IE-ohD" firstAttribute="leading" secondItem="HW6-1H-8lu" secondAttribute="leading" id="djp-xP-yjT"/>
+                            <constraint firstItem="Dnf-IE-ohD" firstAttribute="top" secondItem="HW6-1H-8lu" secondAttribute="top" constant="66" id="ikf-Rq-M8N"/>
+                            <constraint firstItem="Cuu-56-Bft" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="bottom" id="vq2-dX-4K3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dWx-4J-YDP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Kbt-i8-IvS">
+                            <connections>
+                                <action selector="buttonSharePressed:" destination="564-cH-uAu" id="7Gc-28-UDP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKC-lf-2lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,4 +142,7 @@
             <point key="canvasLocation" x="-468" y="694"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Miyagi" width="460" height="320"/>
+    </resources>
 </document>
