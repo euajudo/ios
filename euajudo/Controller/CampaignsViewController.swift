@@ -11,9 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     override func viewDidLoad() {
-        API.manager.callMethodWithName("test", parameters: ["foo", "bar"]) { (response, error) -> Void in
-            
-        }
+        
     }
     
 }

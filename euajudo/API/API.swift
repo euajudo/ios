@@ -9,6 +9,8 @@
 import Foundation
 import Meteor
 
-struct API {
+typealias APICompletationHandler = (AnyObject!, NSError!) -> Void
+
+class API {
     static let manager = METDDPClient(serverURL: NSURL(string: "wss://euajudo.meteor.com/websocket"))
 }
