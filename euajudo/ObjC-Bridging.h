@@ -16,3 +16,5 @@
 #import <SDWebImage/SDWebImageOperation.h>
 #import <SDWebImage/SDWebImagePrefetcher.h>
 #import <SDWebImage/SDImageCache.h>
+
+#import <XCDYouTubeKit/XCDYouTubeKit.h>
