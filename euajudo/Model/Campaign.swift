@@ -24,5 +24,10 @@ class Campaign {
     var description: String!
     var createdAt: NSDate!
     var mainMedia: [String: AnyObject]!
+    
+    init(dict: [String: AnyObject]) {
+        self.name = dict["name"] as! String
+        self.description = dict["description"] as! String
+    }
 
 }
