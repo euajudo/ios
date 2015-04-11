@@ -4,4 +4,3 @@ xcshareddata
 *.xcworkspace
 *.xccheckout
 /Pods
-Podfile.lock
