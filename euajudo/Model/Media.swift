@@ -12,9 +12,9 @@ import SDWebImage
 /**
     Media model.
 
-    :param: Type The media type, comforms with MediaType member values.
-    :param: Url Contains the media's url.
-    :param: Thumb Url Constains the media's thumbnail url when it's available.
+    :param: type The media type, comforms with MediaType member values.
+    :param: url Contains the media's url.
+    :param: thumb Url Constains the media's thumbnail url when it's available.
 */
 
 struct Media {

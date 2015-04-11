@@ -11,8 +11,8 @@ import Foundation
 /**
     Media type model.
 
-    :param: Image Member value for image type.
-    :param: Video Member value for video type.
+    :param: image Member value for image type.
+    :param: video Member value for video type.
 */
 
 enum MediaType: String {
