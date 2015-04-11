@@ -8,7 +8,7 @@
 
 import UIKit
 
-let footerViewHeight: CGFloat = 60
+let footerViewHeight: CGFloat = 74
 
 class CampaignDetailViewController: UIViewController {
     
@@ -35,6 +35,8 @@ class CampaignDetailViewController: UIViewController {
         campaign.mainMedia.image { (image) -> Void in
             weakSelf.imageView.image = image
         }
+        
+        createFooterView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -57,7 +59,7 @@ class CampaignDetailViewController: UIViewController {
         footerViewBackground.alpha = 0.8
         footerView.addSubview(footerViewBackground)
         
-        let footerViewButton = UIButton(frame: CGRectMake(15, 8, width - 30, 44))
+        let footerViewButton = UIButton(frame: CGRectMake(15, 15, width - 30, 44))
         footerViewButton.setTitle("DOAR", forState: .Normal)
         footerViewButton.backgroundColor = UIColor.greenColor()
         footerView.addSubview(footerViewButton)
