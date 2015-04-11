@@ -24,14 +24,9 @@ class CampaignsTableViewController: UITableViewController {
     func reloadCampaigns() {
         self.refreshControl?.beginRefreshing()
         
-        API.sharedInstance.allCampaings { (response, error) -> Void in
-            if let campaigns = response as? [[String: AnyObject]] {
-                for obj in campaigns {
-                    let campaign = Campaign(dict: obj)
-                    
-                    self.campaigns.append(campaign)
-                }
-            }
+        API.sharedInstance.allCampaings { (campaignList, error) -> Void in
+            self.campaigns += campaignList as! [Campaign]
+            self.tableView.reloadData()
         
             self.refreshControl?.endRefreshing()
         }
