@@ -29,8 +29,19 @@ class API {
         API.connection.connect()
     }
     
+    // MARK: - Auth
     
-    // MARK: Campaings
+    func authWithEmail(email: String, password: String, completion: METLogInCompletionHandler) {
+        API.connection.loginWithEmail(email, password: email) { (error) -> Void in
+            completion(error)
+        }
+    }
+    
+    func isLoggedOn() {
+        return API.connection.userID != nil
+    }
+    
+    // MARK: - Campaings
     
     func allCampaings(completion: APICompletationHandler) {
         API.connection.callMethodWithName("allCampaigns", parameters: nil) { (response, error) -> Void in
