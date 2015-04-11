@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="291" y="694"/>
         </scene>
-        <!--View Controller-->
+        <!--Campaign Detail View Controller-->
         <scene sceneID="iVs-Am-pB6">
             <objects>
-                <viewController id="564-cH-uAu" sceneMemberID="viewController">
+                <viewController id="564-cH-uAu" customClass="CampaignDetailViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="65O-Mi-gsM"/>
                         <viewControllerLayoutGuide type="bottom" id="Cuu-56-Bft"/>
