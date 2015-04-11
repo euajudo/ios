@@ -12,6 +12,7 @@ extension API {
     
     func campaings(completionHandler: APICompletationHandler) {
         API.manager.callMethodWithName("campaings", parameters: nil) { (response, error) -> Void in
+            println(response)
             completionHandler(response, error)
         }
     }
