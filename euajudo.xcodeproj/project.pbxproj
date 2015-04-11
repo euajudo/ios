@@ -12,6 +12,7 @@
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
 		418D00E71AD949C400BE105A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E51AD949C400BE105A /* LaunchScreen.xib */; };
 		418D00F31AD949C500BE105A /* euajudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00F21AD949C500BE105A /* euajudoTests.swift */; };
+		9ED78EFCE71D4EF4940EA503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3369FED058ECE7A510AA13 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		418D00D71AD949C400BE105A /* euajudo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euajudo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418D00DB1AD949C400BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00DC1AD949C400BE105A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		418D00EC1AD949C500BE105A /* euajudoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = euajudoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418D00F11AD949C500BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00F21AD949C500BE105A /* euajudoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euajudoTests.swift; sourceTree = "<group>"; };
+		AA3369FED058ECE7A510AA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED78EFCE71D4EF4940EA503 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 				418D00D91AD949C400BE105A /* euajudo */,
 				418D00EF1AD949C500BE105A /* euajudoTests */,
 				418D00D81AD949C400BE105A /* Products */,
+				92FD860EEC661E03EE52B8DF /* Pods */,
+				7C1B64479151AEA6FB2F2CF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +116,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C1B64479151AEA6FB2F2CF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA3369FED058ECE7A510AA13 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92FD860EEC661E03EE52B8DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */,
+				32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 418D00F61AD949C500BE105A /* Build configuration list for PBXNativeTarget "euajudo" */;
 			buildPhases = (
+				75B5B05EA1EC418336DD0845 /* Check Pods Manifest.lock */,
 				418D00D31AD949C400BE105A /* Sources */,
 				418D00D41AD949C400BE105A /* Frameworks */,
 				418D00D51AD949C400BE105A /* Resources */,
+				395181F5427637DCE78F00CC /* Embed Pods Frameworks */,
+				C822F514B110C213192D6CFD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +230,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		395181F5427637DCE78F00CC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75B5B05EA1EC418336DD0845 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C822F514B110C213192D6CFD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		418D00D31AD949C400BE105A /* Sources */ = {
@@ -336,6 +411,7 @@
 		};
 		418D00F71AD949C500BE105A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = euajudo/Info.plist;
@@ -346,6 +422,7 @@
 		};
 		418D00F81AD949C500BE105A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = euajudo/Info.plist;
@@ -407,6 +484,7 @@
 				418D00F81AD949C500BE105A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418D00F91AD949C500BE105A /* Build configuration list for PBXNativeTarget "euajudoTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +493,7 @@
 				418D00FB1AD949C500BE105A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
