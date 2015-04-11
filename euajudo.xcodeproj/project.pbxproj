@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0381C26D1AD99511004E4172 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26C1AD99511004E4172 /* Media.swift */; };
+		0381C26F1AD99580004E4172 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26E1AD99580004E4172 /* MediaType.swift */; };
 		418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00DC1AD949C400BE105A /* AppDelegate.swift */; };
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0381C26C1AD99511004E4172 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Media.swift; path = Model/Media.swift; sourceTree = "<group>"; };
+		0381C26E1AD99580004E4172 /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaType.swift; path = Model/MediaType.swift; sourceTree = "<group>"; };
+		0381C2701AD99D6B004E4172 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = "<group>"; };
 		28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		418D00D71AD949C400BE105A /* euajudo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euajudo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				418D00DB1AD949C400BE105A /* Info.plist */,
+				0381C2701AD99D6B004E4172 /* ObjC-Bridging.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			children = (
 				41A535C71AD978FC008B9F6F /* Campaign.swift */,
 				41A535C91AD97B31008B9F6F /* User.swift */,
+				0381C26C1AD99511004E4172 /* Media.swift */,
+				0381C26E1AD99580004E4172 /* MediaType.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,7 +330,9 @@
 			files = (
 				41A535C31AD97835008B9F6F /* CampaignsTableViewController.swift in Sources */,
 				418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */,
+				0381C26D1AD99511004E4172 /* Media.swift in Sources */,
 				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
+				0381C26F1AD99580004E4172 /* MediaType.swift in Sources */,
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 			);
@@ -457,7 +467,8 @@
 				INFOPLIST_FILE = euajudo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "euajudo/ObjC-Bridging.h";
 			};
 			name = Debug;
 		};
@@ -469,7 +480,8 @@
 				INFOPLIST_FILE = euajudo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "euajudo/ObjC-Bridging.h";
 			};
 			name = Release;
 		};

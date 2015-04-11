@@ -33,7 +33,7 @@ class API {
     // MARK: Campaings
     
     func allCampaings(completion: APICompletationHandler) {
-        API.connection.callMethodWithName("allCampaings", parameters: nil) { (response, error) -> Void in
+        API.connection.callMethodWithName("allCampaigns", parameters: nil) { (response, error) -> Void in
             var list = [Campaign]()
     
             if let objs = response as? [[String: AnyObject]] {
@@ -41,8 +41,8 @@ class API {
                     list.append(Campaign(dict: obj))
                 }
             }
-                    
-            completion(response, error)
+            
+            completion(list, error)
         }
     }
 }

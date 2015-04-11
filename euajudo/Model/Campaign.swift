@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /**
     Campaing model.
 
@@ -16,18 +15,20 @@ import Foundation
     :param: description Campaing description.
     :param: createdAt Campaing creation date.
     :param: mainMedia Dictionary with main media values (type, url and videoUrl if is a video)
- */
+*/
 
 class Campaign {
     
     var name: String!
     var description: String!
     var createdAt: NSDate!
-    var mainMedia: [String: AnyObject]!
-    
+    var mainMedia: Media!
+
     init(dict: [String: AnyObject]) {
         self.name = dict["name"] as! String
         self.description = dict["description"] as! String
+        self.createdAt = NSDate()
+        self.mainMedia = Media()
     }
 
 }
