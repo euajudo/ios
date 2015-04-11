@@ -32,7 +32,10 @@ class Campaign {
         self.user = dict["user"] as! [String: String]
         self.url = dict["canonicalUrl"] as! String
         self.createdAt = NSDate()
-        self.mainMedia = Media()
+        
+        if let media = dict["mainMedia"] as? [String: AnyObject] {
+            self.mainMedia = Media(dict: media)
+        }
     }
 
 }
