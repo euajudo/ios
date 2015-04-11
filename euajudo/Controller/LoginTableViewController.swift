@@ -39,6 +39,8 @@ class LoginTableViewController: UITableViewController {
                 self.stopLoading()
                 
                 if let error = error {
+                    self.stopLoading()
+                
                     let loginErrorAlert = UIAlertController(title: "Oops!",
                                                             message: "Ocorreu algum problema durante a autenticação, tente novamente.",
                                                             preferredStyle: .Alert)
@@ -47,13 +49,19 @@ class LoginTableViewController: UITableViewController {
                     loginErrorAlert.addAction(confirmAction)
                     
                     self.presentViewController(loginErrorAlert, animated: true, completion: nil)
+                } else {
+                    self.dismissSelf()
                 }
             })
         }
     }
     
-    @IBAction func close(sender: UIBarButtonItem) {
+    func dismissSelf() {
         self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func close(sender: UIBarButtonItem) {
+        self.dismissSelf()
     }
     
     @IBAction func forgotPassword(sender: UIButton) {
