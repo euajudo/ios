@@ -72,7 +72,7 @@ class CampaignDetailViewController: UIViewController {
     // MARK: IBAction
 
     @IBAction func buttonSharePressed(sender: AnyObject) {
-        let objectsToShare = ["Foobar"]
+        let objectsToShare = [campaign.url]
         let activity = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         self.presentViewController(activity, animated: true, completion: nil)
     }
