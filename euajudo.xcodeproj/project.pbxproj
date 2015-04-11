@@ -10,6 +10,7 @@
 		0381C26D1AD99511004E4172 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26C1AD99511004E4172 /* Media.swift */; };
 		0381C26F1AD99580004E4172 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26E1AD99580004E4172 /* MediaType.swift */; };
 		0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */; };
+		03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */; };
 		418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00DC1AD949C400BE105A /* AppDelegate.swift */; };
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		0381C26E1AD99580004E4172 /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaType.swift; path = Model/MediaType.swift; sourceTree = "<group>"; };
 		0381C2701AD99D6B004E4172 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = "<group>"; };
 		0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = Controller/LoginTableViewController.swift; sourceTree = "<group>"; };
+		03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupTableViewController.swift; path = Controller/SignupTableViewController.swift; sourceTree = "<group>"; };
 		28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		418D00D71AD949C400BE105A /* euajudo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euajudo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 				41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */,
 				41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */,
 				0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */,
+				03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 				41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */,
+				03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
