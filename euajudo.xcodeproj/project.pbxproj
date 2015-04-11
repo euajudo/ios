@@ -13,7 +13,7 @@
 		418D00E71AD949C400BE105A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E51AD949C400BE105A /* LaunchScreen.xib */; };
 		418D00F31AD949C500BE105A /* euajudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00F21AD949C500BE105A /* euajudoTests.swift */; };
 		41A535C11AD975B6008B9F6F /* APICampaigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C01AD975B6008B9F6F /* APICampaigns.swift */; };
-		41A535C31AD97835008B9F6F /* CampaignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsViewController.swift */; };
+		41A535C31AD97835008B9F6F /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */; };
 		41A535C51AD9783D008B9F6F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C41AD9783D008B9F6F /* API.swift */; };
 		41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C71AD978FC008B9F6F /* Campaign.swift */; };
 		41A535CA1AD97B31008B9F6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C91AD97B31008B9F6F /* User.swift */; };
@@ -43,7 +43,7 @@
 		418D00F11AD949C500BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00F21AD949C500BE105A /* euajudoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euajudoTests.swift; sourceTree = "<group>"; };
 		41A535C01AD975B6008B9F6F /* APICampaigns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APICampaigns.swift; path = API/APICampaigns.swift; sourceTree = "<group>"; };
-		41A535C21AD97835008B9F6F /* CampaignsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsViewController.swift; path = Controller/CampaignsViewController.swift; sourceTree = "<group>"; };
+		41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsTableViewController.swift; path = Controller/CampaignsTableViewController.swift; sourceTree = "<group>"; };
 		41A535C41AD9783D008B9F6F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
 		41A535C71AD978FC008B9F6F /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Campaign.swift; path = Model/Campaign.swift; sourceTree = "<group>"; };
 		41A535C91AD97B31008B9F6F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		41A535BF1AD97573008B9F6F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				41A535C21AD97835008B9F6F /* CampaignsViewController.swift */,
+				41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A535C31AD97835008B9F6F /* CampaignsViewController.swift in Sources */,
+				41A535C31AD97835008B9F6F /* CampaignsTableViewController.swift in Sources */,
 				418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */,
 				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,

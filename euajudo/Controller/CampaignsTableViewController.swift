@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  CampaignsTableViewController.swift
 //  euajudo
 //
 //  Created by Rafael Kellermann Streit on 4/11/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class CampaignsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         
