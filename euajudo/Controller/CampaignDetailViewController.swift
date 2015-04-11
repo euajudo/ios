@@ -8,6 +8,7 @@
 
 import UIKit
 
+let footerViewHeight: CGFloat = 60
 
 class CampaignDetailViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class CampaignDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    var footerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,29 @@ class CampaignDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.scrollView.contentSize = self.contentView.frame.size
+    }
+    
+    // MARK: FooterView
+    
+    func createFooterView() {
+        let frame = self.view.frame
+        let top = frame.size.height - footerViewHeight
+        let width = frame.size.width
+        
+        footerView = UIView(frame: CGRectMake(0, top, frame.size.width, footerViewHeight))
+        footerView.backgroundColor = UIColor.clearColor()
+        
+        let footerViewBackground = UIView(frame: CGRectMake(0, 0, width, footerViewHeight))
+        footerViewBackground.backgroundColor = UIColor.whiteColor()
+        footerViewBackground.alpha = 0.8
+        footerView.addSubview(footerViewBackground)
+        
+        let footerViewButton = UIButton(frame: CGRectMake(15, 8, width - 30, 44))
+        footerViewButton.setTitle("DOAR", forState: .Normal)
+        footerViewButton.backgroundColor = UIColor.greenColor()
+        footerView.addSubview(footerViewButton)
+        
+        view.addSubview(footerView)
     }
     
     

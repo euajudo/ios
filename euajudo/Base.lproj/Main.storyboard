@@ -47,7 +47,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnf-IE-ohD">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fja-XK-Ouk" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="449"/>
@@ -108,7 +108,7 @@
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="width" secondItem="Dnf-IE-ohD" secondAttribute="width" id="RRr-dj-5YX"/>
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" id="bm5-oU-kEL"/>
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="top" id="qIO-bD-vf0"/>
-                                    <constraint firstAttribute="bottom" secondItem="fja-XK-Ouk" secondAttribute="bottom" constant="87" id="vJ4-rs-ZPa"/>
+                                    <constraint firstAttribute="bottom" secondItem="fja-XK-Ouk" secondAttribute="bottom" constant="27" id="vJ4-rs-ZPa"/>
                                     <constraint firstAttribute="trailing" secondItem="fja-XK-Ouk" secondAttribute="trailing" id="xhN-JO-6qm"/>
                                 </constraints>
                             </scrollView>
@@ -116,7 +116,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Dnf-IE-ohD" secondAttribute="trailing" id="7lj-5Q-oLH"/>
-                            <constraint firstItem="Cuu-56-Bft" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="bottom" id="CXm-US-7xM"/>
+                            <constraint firstItem="Cuu-56-Bft" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="bottom" constant="60" id="CXm-US-7xM"/>
                             <constraint firstItem="Dnf-IE-ohD" firstAttribute="top" secondItem="65O-Mi-gsM" secondAttribute="bottom" id="oZ8-a2-dWM"/>
                             <constraint firstItem="Dnf-IE-ohD" firstAttribute="leading" secondItem="HW6-1H-8lu" secondAttribute="leading" id="p5W-hp-JpL"/>
                         </constraints>
