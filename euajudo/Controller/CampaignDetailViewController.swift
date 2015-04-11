@@ -28,7 +28,7 @@ class CampaignDetailViewController: UIViewController {
         super.viewDidLoad()
         
         labelTitle.text = campaign.name
-        labelReceiverName.text = "nome do usuário"
+        labelReceiverName.text = campaign.user["name"]
         labelDescription.text = campaign.description
         
         unowned let weakSelf = self
