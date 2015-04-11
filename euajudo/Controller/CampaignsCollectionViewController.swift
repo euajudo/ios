@@ -8,22 +8,39 @@
 
 import UIKit
 
+
+let kCellCampaignIdentifier = "CellCampaign"
+
+
 class CampaignsCollectionViewController: UICollectionViewController {
 
     var campaigns = [Campaign]()
     
     lazy var refreshControl: UIRefreshControl = {
-        return UIRefreshControl()
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: "refreshControlUpdateStatus:", forControlEvents: .ValueChanged)
+        return refresh
     }()
+    
+    
+    // MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register cell in collectionView
+        collectionView?.registerNib(UINib(nibName: "CampaignCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: kCellCampaignIdentifier)
+        
+        // Refresh data
         collectionView?.addSubview(refreshControl)
         reloadCampaigns()
     }
     
+    
+    // MARK: Data
+    
     func reloadCampaigns() {
+        campaigns = [Campaign]()
         refreshControl.beginRefreshing()
         
         unowned let weakSelf = self
@@ -31,6 +48,15 @@ class CampaignsCollectionViewController: UICollectionViewController {
             weakSelf.campaigns += campaignList as! [Campaign]
             weakSelf.collectionView!.reloadData()
             weakSelf.refreshControl.endRefreshing()
+        }
+    }
+    
+    
+    // MARK: RefreshControl
+    
+    func refreshControlUpdateStatus(refreshControl: UIRefreshControl) {
+        if refreshControl.refreshing {
+            reloadCampaigns()
         }
     }
     
@@ -46,7 +72,24 @@ extension CampaignsCollectionViewController: UICollectionViewDataSource {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(kCellCampaignIdentifier, forIndexPath: indexPath) as! CampaignCell
+        
+        let campaign = campaigns[indexPath.row]
+        cell.campaign = campaign
+        cell.updateInformations()
+        
+        return cell
+    }
+    
+}
+
+
+// MARK: UICollectionViewDataSource
+
+extension CampaignsCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(view.frame.size.width, view.frame.size.width)
     }
     
 }
