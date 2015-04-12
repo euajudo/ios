@@ -34,7 +34,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--Início-->
         <scene sceneID="aEZ-3u-XPe">
             <objects>
                 <collectionViewController id="YjN-3S-qFd" customClass="CampaignsCollectionViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="YjN-3S-qFd" id="Pmc-hW-rCh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Home" id="wRi-yd-rV4">
+                    <navigationItem key="navigationItem" title="Início" id="wRi-yd-rV4">
                         <barButtonItem key="leftBarButtonItem" image="Settings" id="cwX-e0-NqF">
                             <connections>
                                 <action selector="buttonSettingsPressed:" destination="YjN-3S-qFd" id="BVK-jA-I7M"/>
@@ -70,11 +70,40 @@
                         <outlet property="buttonProfile" destination="YWm-HH-57Q" id="CwT-O1-Cfu"/>
                         <outlet property="buttonSettings" destination="cwX-e0-NqF" id="1ix-cI-0kf"/>
                         <segue destination="564-cH-uAu" kind="show" identifier="Campaign" id="Yx3-PI-viT"/>
+                        <segue destination="QhU-u7-ni7" kind="show" identifier="donatedCampaigns" id="Wnn-Lj-4pH"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgA-om-XJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="694"/>
+            <point key="canvasLocation" x="-1863" y="830"/>
+        </scene>
+        <!--Donated Campaigns Collection View Controller-->
+        <scene sceneID="5E2-7a-gRe">
+            <objects>
+                <collectionViewController id="QhU-u7-ni7" customClass="DonatedCampaignsCollectionViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ds9-WD-iRb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MZf-sV-9kn">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="QhU-u7-ni7" id="ZCq-bx-QIc"/>
+                            <outlet property="delegate" destination="QhU-u7-ni7" id="VQB-Fk-Ukb"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="564-cH-uAu" kind="show" identifier="Campaign" id="ybg-ld-fJk"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4u6-76-rCA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1055" y="234"/>
         </scene>
         <!--Campaign Detail View Controller-->
         <scene sceneID="iVs-Am-pB6">
@@ -215,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKC-lf-2lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="694"/>
+            <point key="canvasLocation" x="-1062" y="1125"/>
         </scene>
         <!--Entrar-->
         <scene sceneID="2H7-Df-0Gg">
@@ -707,7 +736,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfy-hz-DAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468" y="694"/>
+            <point key="canvasLocation" x="-2624" y="830"/>
         </scene>
         <!--Nova conta-->
         <scene sceneID="CJT-hn-2xp">
@@ -957,4 +986,7 @@
         <image name="Settings" width="25" height="25"/>
         <image name="User" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ybg-ld-fJk"/>
+    </inferredMetricsTieBreakers>
 </document>
