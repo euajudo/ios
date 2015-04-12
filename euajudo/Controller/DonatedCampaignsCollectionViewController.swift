@@ -1,23 +1,18 @@
 //
-//  CampaignsCollectionViewController.swift
+//  DonatedCampaignsCollectionViewController.swift
 //  euajudo
 //
-//  Created by Rafael Kellermann Streit on 4/11/15.
+//  Created by Filipe Alvarenga on 12/04/15.
 //  Copyright (c) 2015 euajudo. All rights reserved.
 //
 
 import UIKit
 
+let reuseIdentifier = "CampaignCell"
 
-let kCellCampaignIdentifier = "CellCampaign"
-
-
-class CampaignsCollectionViewController: UICollectionViewController {
-
-    var campaigns = [Campaign]()
+class DonatedCampaignsCollectionViewController: UICollectionViewController {
     
-    @IBOutlet weak var buttonProfile: UIBarButtonItem!
-    @IBOutlet weak var buttonSettings: UIBarButtonItem!
+    var campaigns = [Campaign]()
     
     lazy var refreshControl: UIRefreshControl = {
         let refresh = UIRefreshControl()
@@ -30,7 +25,7 @@ class CampaignsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Register cell in collectionView
         collectionView?.registerNib(UINib(nibName: "CampaignCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: kCellCampaignIdentifier)
         
@@ -55,7 +50,7 @@ class CampaignsCollectionViewController: UICollectionViewController {
         refreshControl.beginRefreshing()
         
         unowned let weakSelf = self
-        API.sharedInstance.allCampaings { (campaignList, error) -> Void in
+        API.sharedInstance.donatedCampaigns { (campaignList, error) -> Void in
             weakSelf.campaigns += campaignList as! [Campaign]
             weakSelf.collectionView!.reloadData()
             weakSelf.refreshControl.endRefreshing()
@@ -70,39 +65,13 @@ class CampaignsCollectionViewController: UICollectionViewController {
             reloadCampaigns()
         }
     }
-    
-    // MARK: - Navigation
-    
-    func showAuth() {
-        let auth = self.storyboard!.instantiateViewControllerWithIdentifier("Auth") as! UINavigationController
-        self.presentViewController(auth, animated: true, completion: nil)
-    }
-    
-    func showDonatedCampaigns() {
-        self.performSegueWithIdentifier("donatedCampaigns", sender: self)
-    }
-    
-    // MARK: - IBAction
-    
-    @IBAction func buttonProfilePressed(sender: AnyObject) {
-        if !API.sharedInstance.isLogged() {
-            showAuth()
-        } else {
-            showDonatedCampaigns()
-        }
-    }
-    
-    @IBAction func buttonSettingsPressed(sender: AnyObject) {
-        let nav = storyboard?.instantiateViewControllerWithIdentifier("Settings") as! UINavigationController
-        self.presentViewController(nav, animated: true, completion: nil)
-    }
-    
+
 }
 
 
 // MARK: UICollectionViewDataSource
 
-extension CampaignsCollectionViewController: UICollectionViewDataSource {
+extension DonatedCampaignsCollectionViewController: UICollectionViewDataSource {
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return campaigns.count
@@ -123,7 +92,7 @@ extension CampaignsCollectionViewController: UICollectionViewDataSource {
 
 // MARK: UICollectionViewDelegate
 
-extension CampaignsCollectionViewController: UICollectionViewDelegate {
+extension DonatedCampaignsCollectionViewController: UICollectionViewDelegate {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let campaign = campaigns[indexPath.row]
@@ -135,7 +104,7 @@ extension CampaignsCollectionViewController: UICollectionViewDelegate {
 
 // MARK: UICollectionViewDataSource
 
-extension CampaignsCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension DonatedCampaignsCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(view.frame.size.width - 30, 410.0)

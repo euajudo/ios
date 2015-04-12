@@ -62,4 +62,18 @@ class API {
             completion(list, error)
         }
     }
+    
+    func donatedCampaigns(completion: APICompletationHandler) {
+        API.connection.callMethodWithName("myDonatedCampaigns", parameters: nil) { (response, error) -> Void in
+            var list = [Campaign]()
+            
+            if let objs = response as? [[String: AnyObject]] {
+                for obj in objs {
+                    list.append(Campaign(dict: obj))
+                }
+            }
+            println(response)
+            completion(list, error)
+        }
+    }
 }

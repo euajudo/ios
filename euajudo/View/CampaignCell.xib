@@ -4,8 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
         <mutableArray key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
         </mutableArray>
@@ -65,8 +67,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cIl-Oi-nF3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                <color key="textColor" red="1" green="0.30588235289999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="Ofe-42-mch">
@@ -114,6 +116,7 @@
                 <outlet property="labelDescription" destination="PId-zn-O5g" id="nx8-n9-tgK"/>
                 <outlet property="labelTitle" destination="ohq-ty-pvZ" id="A1x-E6-iWF"/>
                 <outlet property="playImage" destination="Ofe-42-mch" id="HlZ-A9-7VM"/>
+                <outlet property="userName" destination="Tt8-iZ-3Ko" id="XUe-yO-sDf"/>
             </connections>
             <point key="canvasLocation" x="379" y="309"/>
         </collectionViewCell>
