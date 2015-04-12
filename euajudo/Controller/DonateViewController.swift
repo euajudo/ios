@@ -24,8 +24,10 @@ class DonateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = campaign.name
         
-        textFieldValue.font = UIFont(name: "Lato-Regular", size: 100)
+        textFieldValue.font = UIFont(name: "Lato-Regular", size: 98)
     }
 
 
