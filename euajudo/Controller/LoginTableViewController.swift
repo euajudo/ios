@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginTableViewController: UITableViewController {
+class LoginTableViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -41,11 +41,13 @@ class LoginTableViewController: UITableViewController {
                 if let error = error {
                     self.stopLoading()
                 
-                    let loginErrorAlert = UIAlertController(title: "Oops!",
-                                                            message: "Ocorreu algum problema durante a autenticação, tente novamente.",
-                                                            preferredStyle: .Alert)
+                    let loginErrorAlert = UIAlertController(
+                        title: "Oops!",
+                        message: "Ocorreu algum problema durante a autenticação, tente novamente.",
+                        preferredStyle: .Alert
+                    )
                     
-                    let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                    let confirmAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
                     loginErrorAlert.addAction(confirmAction)
                     
                     self.presentViewController(loginErrorAlert, animated: true, completion: nil)
@@ -88,6 +90,20 @@ class LoginTableViewController: UITableViewController {
         self.activityIndicator.stopAnimating()
         
         self.navigationItem.rightBarButtonItem = self.login
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.email {
+            self.password.becomeFirstResponder()
+        }
+        
+        if textField == self.password {
+            login(self.login)
+        }
+        
+        return true
     }
     
 }

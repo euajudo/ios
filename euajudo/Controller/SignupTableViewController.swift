@@ -118,4 +118,26 @@ class SignupTableViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = self.signUp
     }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.name {
+            self.email.becomeFirstResponder()
+        }
+        
+        if textField == self.email {
+            self.password.becomeFirstResponder()
+        }
+        
+        if textField == self.password {
+            self.passwordConfirmation.becomeFirstResponder()
+        }
+        
+        if textField == self.passwordConfirmation {
+            signUp(self.signUp)
+        }
+        
+        return true
+    }
 }
