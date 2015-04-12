@@ -8,7 +8,6 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -32,9 +31,9 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrecadado:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAR-Yj-4dD">
-                    <rect key="frame" x="15" y="21" width="83" height="21"/>
+                    <rect key="frame" x="15" y="21" width="74" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="83" id="2Qn-Zk-ijU"/>
+                        <constraint firstAttribute="width" constant="74" id="2Qn-Zk-ijU"/>
                         <constraint firstAttribute="height" constant="21" id="QD4-5B-7dH"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
@@ -42,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICp-nm-203">
-                    <rect key="frame" x="106" y="21" width="97" height="21"/>
+                    <rect key="frame" x="91" y="21" width="97" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="E5S-fx-0aG"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="zHk-4O-GWV"/>
@@ -51,21 +50,11 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 10000,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-41-nVy">
-                    <rect key="frame" x="488" y="21" width="97" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 10000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-41-nVy">
+                    <rect key="frame" x="490" y="21" width="97" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="BbS-jO-0r1"/>
                         <constraint firstAttribute="height" constant="21" id="qgI-yY-W77"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objetivo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIj-iK-ERs">
-                    <rect key="frame" x="410" y="21" width="70" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="6c7-t1-462"/>
-                        <constraint firstAttribute="width" constant="70" id="Z8h-jd-3i4"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,16 +67,16 @@
                 <constraint firstItem="HAR-Yj-4dD" firstAttribute="top" secondItem="LzA-dv-3ee" secondAttribute="bottom" constant="8" id="DaK-GK-zlN"/>
                 <constraint firstAttribute="trailing" secondItem="LzA-dv-3ee" secondAttribute="trailing" constant="15" id="IDb-lc-2J3"/>
                 <constraint firstItem="LzA-dv-3ee" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ki9-4f-dld"/>
-                <constraint firstItem="ICp-nm-203" firstAttribute="leading" secondItem="HAR-Yj-4dD" secondAttribute="trailing" constant="8" id="VAi-iH-G2O"/>
+                <constraint firstItem="ICp-nm-203" firstAttribute="leading" secondItem="HAR-Yj-4dD" secondAttribute="trailing" constant="2" id="VAi-iH-G2O"/>
                 <constraint firstItem="HAR-Yj-4dD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="WGm-Cg-1Z9"/>
                 <constraint firstItem="ICp-nm-203" firstAttribute="top" secondItem="LzA-dv-3ee" secondAttribute="bottom" constant="8" id="XCs-BV-WNG"/>
-                <constraint firstItem="hIj-iK-ERs" firstAttribute="top" secondItem="LzA-dv-3ee" secondAttribute="bottom" constant="8" id="Z0m-66-j5t"/>
-                <constraint firstItem="g8q-41-nVy" firstAttribute="leading" secondItem="hIj-iK-ERs" secondAttribute="trailing" constant="8" id="b0u-MX-BMD"/>
                 <constraint firstItem="g8q-41-nVy" firstAttribute="top" secondItem="LzA-dv-3ee" secondAttribute="bottom" constant="8" id="fGt-8r-hDn"/>
-                <constraint firstAttribute="trailing" secondItem="g8q-41-nVy" secondAttribute="trailing" constant="15" id="qVs-5M-On3"/>
+                <constraint firstAttribute="trailing" secondItem="g8q-41-nVy" secondAttribute="trailing" constant="13" id="qVs-5M-On3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="labelActualValue" destination="ICp-nm-203" id="AFW-CQ-A9M"/>
+                <outlet property="labelFinalValue" destination="g8q-41-nVy" id="Qaw-gE-6q5"/>
                 <outlet property="progress" destination="9cm-y2-Qud" id="ecj-Tc-co3"/>
                 <outlet property="progressContainer" destination="LzA-dv-3ee" id="8YF-kf-9AF"/>
             </connections>

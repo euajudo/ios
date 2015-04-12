@@ -19,6 +19,9 @@ class CampaignGoalView: UIView {
     @IBOutlet weak var progressContainer: UIView!
     @IBOutlet weak var progress: UIView!
     
+    @IBOutlet weak var labelActualValue: UILabel!
+    @IBOutlet weak var labelFinalValue: UILabel!
+
     func generatePercentage() {
         var percentage = (((campaign.donatedValue * 100.0) / campaign.targetValue) / 100)
         
@@ -34,5 +37,13 @@ class CampaignGoalView: UIView {
             width: progressWidth,
             height: self.progress.bounds.height
         )
+        
+        // Update labels
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.currencySymbol = ""
+        
+        labelActualValue.text = "R$ \(formatter.stringFromNumber(campaign.donatedValue)!)"
+        labelFinalValue.text = "R$ \(formatter.stringFromNumber(campaign.targetValue)!)"
     }
 }
