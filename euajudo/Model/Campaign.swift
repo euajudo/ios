@@ -26,6 +26,8 @@ class Campaign {
     var mainMedia: Media!
     var user: [String: String]!
     var url: String!
+    var donatedValue: Double!
+    var targetValue: Double!
 
     init(dict: [String: AnyObject]) {
         self._id = dict["_id"] as! String
@@ -34,6 +36,8 @@ class Campaign {
         self.user = dict["user"] as! [String: String]
         self.url = dict["canonicalUrl"] as! String
         self.createdAt = NSDate()
+        self.targetValue = dict["targetValue"] as! Double
+        self.donatedValue = dict["donatedValue"] as! Double
         
         if let media = dict["mainMedia"] as? [String: AnyObject] {
             self.mainMedia = Media(dict: media)

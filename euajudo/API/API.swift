@@ -58,7 +58,7 @@ class API {
                     list.append(Campaign(dict: obj))
                 }
             }
-            
+            println(response)
             completion(list, error)
         }
     }
