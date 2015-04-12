@@ -30,8 +30,17 @@ class DonateViewController: UIViewController {
         textFieldValue.font = UIFont(name: "Lato-Regular", size: 98)
     }
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = sender as? PaymentInformationsViewController {
+            controller.value = (textFieldValue.text as NSString).floatValue
+            controller.isMonthly = isPaymentMonthly
+            controller.campaign = campaign
+        }
+    }
+    
 
-    // MARK: IBAction
+    // MARK: - IBAction
     
     @IBAction func buttonPaymentMonthlyPressed(sender: AnyObject) {
         buttonPaymentMonthly.enabled = false

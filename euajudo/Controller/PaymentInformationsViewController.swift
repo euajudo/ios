@@ -11,6 +11,9 @@ import UIKit
 
 class PaymentInformationsViewController: UIViewController {
     
+    var campaign: Campaign?
+    var value: Float?
+    var isMonthly: Bool?
     
     @IBOutlet weak var buttonPayment: UIButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
