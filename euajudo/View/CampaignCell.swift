@@ -11,6 +11,7 @@ import UIKit
 class CampaignCell: UICollectionViewCell {
     
     var campaign: Campaign?
+    var progressView: CampaignGoalView!
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -20,11 +21,11 @@ class CampaignCell: UICollectionViewCell {
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
-        let progressView = NSBundle.mainBundle().loadNibNamed("CampaignGoalView", owner: self, options: nil)[0] as! CampaignGoalView
-
+        progressView = NSBundle.mainBundle().loadNibNamed("CampaignGoalView", owner: self, options: nil)[0] as! CampaignGoalView
+        
         self.containerView.addSubview(progressView)
         self.containerView.bringSubviewToFront(progressView.progress)
-
+        
         let frameSize = progressView.frame
         progressView.frame = CGRectMake(progressView.frame.origin.x, self.frame.size.height - frameSize.height, self.frame.size.width, frameSize.height)
         
@@ -32,20 +33,7 @@ class CampaignCell: UICollectionViewCell {
         progressView.layoutIfNeeded()
         progressView.layoutSubviews()
         
-        progressView.campaign = campaign
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-//        let progressView = NSBundle.mainBundle().loadNibNamed("CampaignGoalView", owner: self, options: nil)[0] as! CampaignGoalView
-//        progressView.campaign = campaign
-//        progressView.frame = CGRect(x: 0.0, y: 386.0, width: self.bounds.width, height: 50.0)
-//        
-//        println(progressView.progress.bounds)
-//        
-//        self.addSubview(progressView)
-//        self.bringSubviewToFront(progressView.progress)
+        progressView?.campaign = campaign
     }
     
     func updateInformations() {
@@ -56,6 +44,8 @@ class CampaignCell: UICollectionViewCell {
         campaign?.mainMedia.image({ (image) -> Void in
             weakSelf.imageView.image = image
         })
+        
+        progressView?.campaign = campaign
     }
 
 }
