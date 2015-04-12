@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0381C26D1AD99511004E4172 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26C1AD99511004E4172 /* Media.swift */; };
 		0381C26F1AD99580004E4172 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26E1AD99580004E4172 /* MediaType.swift */; };
+		414EF9941ADA07550019DA57 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8441ADA039800B49C86 /* Lato-Bold.ttf */; };
+		414EF9951ADA07550019DA57 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8451ADA039800B49C86 /* Lato-Light.ttf */; };
+		414EF9961ADA07550019DA57 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8461ADA039800B49C86 /* Lato-Regular.ttf */; };
+		414EF9971ADA07550019DA57 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8471ADA039800B49C86 /* Lato-Semibold.ttf */; };
 		418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00DC1AD949C400BE105A /* AppDelegate.swift */; };
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
@@ -60,6 +64,10 @@
 		41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignCell.swift; path = View/CampaignCell.swift; sourceTree = "<group>"; };
 		41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateViewController.swift; path = Controller/DonateViewController.swift; sourceTree = "<group>"; };
 		41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Controller/BaseNavigationController.swift; sourceTree = "<group>"; };
+		41C5F8441ADA039800B49C86 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		41C5F8451ADA039800B49C86 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		41C5F8461ADA039800B49C86 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "Fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		41C5F8471ADA039800B49C86 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Semibold.ttf"; path = "Fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		AA3369FED058ECE7A510AA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +129,7 @@
 		418D00DA1AD949C400BE105A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41C5F83F1ADA037000B49C86 /* Fonts */,
 				418D00DB1AD949C400BE105A /* Info.plist */,
 				0381C2701AD99D6B004E4172 /* ObjC-Bridging.h */,
 			);
@@ -181,6 +190,17 @@
 				41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		41C5F83F1ADA037000B49C86 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				41C5F8441ADA039800B49C86 /* Lato-Bold.ttf */,
+				41C5F8451ADA039800B49C86 /* Lato-Light.ttf */,
+				41C5F8461ADA039800B49C86 /* Lato-Regular.ttf */,
+				41C5F8471ADA039800B49C86 /* Lato-Semibold.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		7C1B64479151AEA6FB2F2CF1 /* Frameworks */ = {
@@ -283,6 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414EF9941ADA07550019DA57 /* Lato-Bold.ttf in Resources */,
+				414EF9951ADA07550019DA57 /* Lato-Light.ttf in Resources */,
+				414EF9961ADA07550019DA57 /* Lato-Regular.ttf in Resources */,
+				414EF9971ADA07550019DA57 /* Lato-Semibold.ttf in Resources */,
 				418D00E21AD949C400BE105A /* Main.storyboard in Resources */,
 				41C5F8381AD9C5CF00B49C86 /* CampaignCell.xib in Resources */,
 				418D00E71AD949C400BE105A /* LaunchScreen.xib in Resources */,
