@@ -36,9 +36,9 @@ class CampaignDetailViewController: UIViewController {
         campaign.mainMedia.image { (image) -> Void in
             weakSelf.imageView.image = image
         }
-        
+
         createFooterView()
-        
+
         // Add tap to imageView
         let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "imageViewPressed:")
         imageView.addGestureRecognizer(tapImageViewGesture)
@@ -58,16 +58,22 @@ class CampaignDetailViewController: UIViewController {
         
         footerView = UIView(frame: CGRectMake(0, top, frame.size.width, footerViewHeight))
         footerView.backgroundColor = UIColor.clearColor()
-        
+
         let footerViewBackground = UIView(frame: CGRectMake(0, 0, width, footerViewHeight))
         footerViewBackground.backgroundColor = UIColor.whiteColor()
         footerViewBackground.alpha = 0.9
         footerView.addSubview(footerViewBackground)
         
+        let footerViewSeparator = UIView(frame: CGRectMake(0, 0, width, 0.5))
+        footerViewSeparator.backgroundColor = UIColor.lightGrayColor()
+        footerViewSeparator.alpha = 0.5
+        footerView.addSubview(footerViewSeparator)
+        
         let footerViewButton = UIButton(frame: CGRectMake(15, 15, width - 30, 44))
         footerViewButton.layer.cornerRadius = 5
         footerViewButton.setTitle("AJUDAR CAMPANHA", forState: .Normal)
-        footerViewButton.backgroundColor = UIColor.greenColor()
+        footerViewButton.backgroundColor = UIColor(red: 0, green: 178.0/255, blue: 0, alpha: 1)
+        footerViewButton.titleLabel?.font = UIFont(name: "Lato-Bold", size: 16)
         footerViewButton.addTarget(self, action: "buttonDonatePressed:", forControlEvents: .TouchUpInside)
         footerView.addSubview(footerViewButton)
         

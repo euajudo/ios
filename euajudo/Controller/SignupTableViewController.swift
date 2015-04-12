@@ -20,7 +20,7 @@ class SignupTableViewController: UITableViewController {
     }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
-        return UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        return UIActivityIndicatorView(activityIndicatorStyle: .White)
     }()
 
     // MARK: - View Life Cycle
@@ -37,10 +37,12 @@ class SignupTableViewController: UITableViewController {
         if self.areAllInputsValid() {
             self.startLoading()
             
-            let params = ["name": self.name.text,
-                          "email": self.email.text,
-                          "password": self.password.text,
-                          "passwordConfirmation": self.passwordConfirmation.text]
+            let params = [
+                "name": self.name.text,
+                "email": self.email.text,
+                "password": self.password.text,
+                "passwordConfirmation": self.passwordConfirmation.text
+            ]
             
             API.sharedInstance.signUpWith(params: params, completion: { (error) -> Void in
                 if let err = error {
@@ -115,5 +117,27 @@ class SignupTableViewController: UITableViewController {
         self.activityIndicator.stopAnimating()
         
         self.navigationItem.rightBarButtonItem = self.signUp
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.name {
+            self.email.becomeFirstResponder()
+        }
+        
+        if textField == self.email {
+            self.password.becomeFirstResponder()
+        }
+        
+        if textField == self.password {
+            self.passwordConfirmation.becomeFirstResponder()
+        }
+        
+        if textField == self.passwordConfirmation {
+            signUp(self.signUp)
+        }
+        
+        return true
     }
 }
