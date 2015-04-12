@@ -22,6 +22,7 @@
 		41C5F8381AD9C5CF00B49C86 /* CampaignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8371AD9C5CF00B49C86 /* CampaignCell.xib */; };
 		41C5F83A1AD9C61C00B49C86 /* CampaignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */; };
 		41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */; };
+		41C5F83E1AD9F83100B49C86 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */; };
 		9ED78EFCE71D4EF4940EA503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3369FED058ECE7A510AA13 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		41C5F8371AD9C5CF00B49C86 /* CampaignCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CampaignCell.xib; path = View/CampaignCell.xib; sourceTree = "<group>"; };
 		41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignCell.swift; path = View/CampaignCell.swift; sourceTree = "<group>"; };
 		41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateViewController.swift; path = Controller/DonateViewController.swift; sourceTree = "<group>"; };
+		41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Controller/BaseNavigationController.swift; sourceTree = "<group>"; };
 		AA3369FED058ECE7A510AA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */,
 				41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */,
 				41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */,
+				41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
 				0381C26F1AD99580004E4172 /* MediaType.swift in Sources */,
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,
+				41C5F83E1AD9F83100B49C86 /* BaseNavigationController.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 				41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */,
 				41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */,

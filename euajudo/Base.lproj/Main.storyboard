@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="1084" y="694"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="QUr-y4-EK8">
             <objects>
-                <navigationController storyboardIdentifier="Donate" id="R8G-Ba-9oZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Donate" id="R8G-Ba-9oZ" customClass="BaseNavigationController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H7K-mn-UxP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,14 +170,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
                                 <rect key="frame" x="168" y="94" width="264" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="JbB-Al-Y9y"/>
                                     <constraint firstAttribute="height" constant="131" id="iTh-Yz-zX5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
                                 <rect key="frame" x="276" y="285" width="49" height="30"/>
@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="1084" y="1565"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="8NF-W6-rU4">
             <objects>
-                <navigationController id="ZHZ-a3-SPd" sceneMemberID="viewController">
+                <navigationController id="ZHZ-a3-SPd" customClass="BaseNavigationController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x1o-ZT-tcJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
