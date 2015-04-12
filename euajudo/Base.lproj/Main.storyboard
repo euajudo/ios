@@ -118,6 +118,15 @@
                                                     <constraint firstAttribute="width" secondItem="mWL-7Q-1as" secondAttribute="height" multiplier="15:8" id="P97-vb-ALA"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-iJ-zif">
+                                                <rect key="frame" x="18" y="475" width="564" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Anp-kc-T4z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxL-t3-3Yh">
                                                 <rect key="frame" x="0.0" y="404" width="600" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,15 +141,13 @@
                                                     <constraint firstAttribute="height" constant="1" id="Zu5-LT-nG0"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-iJ-zif">
-                                                <rect key="frame" x="18" y="475" width="564" height="21"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-gb-hHr">
+                                                <rect key="frame" x="8" y="335" width="52" height="52"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Anp-kc-T4z"/>
+                                                    <constraint firstAttribute="height" constant="52" id="IoM-Ld-NQz"/>
+                                                    <constraint firstAttribute="width" constant="52" id="XSe-tE-452"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -151,6 +158,7 @@
                                             <constraint firstAttribute="trailing" secondItem="mWL-7Q-1as" secondAttribute="trailing" id="Iv9-xK-Cue"/>
                                             <constraint firstAttribute="trailing" secondItem="9eV-LI-DyD" secondAttribute="trailing" constant="18" id="JsW-CH-Ist"/>
                                             <constraint firstItem="dKk-iJ-zif" firstAttribute="top" secondItem="mWL-7Q-1as" secondAttribute="bottom" constant="78" id="K15-dJ-GP6"/>
+                                            <constraint firstItem="UxL-t3-3Yh" firstAttribute="top" secondItem="jqg-gb-hHr" secondAttribute="bottom" constant="17" id="Kq3-dA-20T"/>
                                             <constraint firstAttribute="trailing" secondItem="dKk-iJ-zif" secondAttribute="trailing" constant="18" id="Mfu-BU-IxZ"/>
                                             <constraint firstItem="9eV-LI-DyD" firstAttribute="leading" secondItem="fja-XK-Ouk" secondAttribute="leading" constant="18" id="Pbb-Qs-1MK"/>
                                             <constraint firstItem="UxL-t3-3Yh" firstAttribute="leading" secondItem="fja-XK-Ouk" secondAttribute="leading" id="Yoz-Fw-Ycj"/>
@@ -162,6 +170,7 @@
                                             <constraint firstItem="mWL-7Q-1as" firstAttribute="leading" secondItem="fja-XK-Ouk" secondAttribute="leading" id="knN-pn-P8J"/>
                                             <constraint firstAttribute="trailing" secondItem="UxL-t3-3Yh" secondAttribute="trailing" id="lAi-bD-faj"/>
                                             <constraint firstItem="VHv-l6-cKD" firstAttribute="leading" secondItem="fja-XK-Ouk" secondAttribute="leading" constant="18" id="vZH-JN-zx3"/>
+                                            <constraint firstItem="jqg-gb-hHr" firstAttribute="leading" secondItem="fja-XK-Ouk" secondAttribute="leading" constant="8" id="wZF-23-dkT"/>
                                             <constraint firstAttribute="trailing" secondItem="VHv-l6-cKD" secondAttribute="trailing" constant="18" id="xg8-zw-r5s"/>
                                         </constraints>
                                     </view>
@@ -196,6 +205,7 @@
                     <connections>
                         <outlet property="contentView" destination="fja-XK-Ouk" id="NjY-w7-YQY"/>
                         <outlet property="imageView" destination="mWL-7Q-1as" id="QMu-xL-10u"/>
+                        <outlet property="imageViewPlayer" destination="jqg-gb-hHr" id="hir-2W-WHU"/>
                         <outlet property="labelDescription" destination="dKk-iJ-zif" id="shx-dm-Ut0"/>
                         <outlet property="labelReceiverName" destination="9eV-LI-DyD" id="n4T-hP-mAh"/>
                         <outlet property="labelTitle" destination="VHv-l6-cKD" id="YR3-2b-0FY"/>
@@ -941,6 +951,7 @@
     </scenes>
     <resources>
         <image name="Miyagi" width="460" height="320"/>
+        <image name="Play" width="52" height="52"/>
         <image name="Radio-Off" width="24" height="24"/>
         <image name="Radio-On" width="24" height="24"/>
         <image name="Settings" width="25" height="25"/>
