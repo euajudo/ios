@@ -18,7 +18,7 @@ class LoginTableViewController: UITableViewController {
     }()
     
     lazy var activityIndicator: UIActivityIndicatorView = {
-        return UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        return UIActivityIndicatorView(activityIndicatorStyle: .White)
     }()
     
     // MARK: - View Life Cycle 
