@@ -530,7 +530,7 @@
         <!--Dados do Cartão-->
         <scene sceneID="Nmp-HC-vh0">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CQd-I0-Jvv" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CQd-I0-Jvv" customClass="PaymentInformationsViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5K9-PS-NYU"/>
                         <viewControllerLayoutGuide type="bottom" id="0vx-1z-Tbj"/>
@@ -585,6 +585,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="buttonPaymentPressed:" destination="CQd-I0-Jvv" eventType="touchUpInside" id="Tnv-Mm-AmS"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6F2-nc-4Iv">
                                                         <rect key="frame" x="0.0" y="45" width="296" height="1"/>
@@ -602,6 +605,9 @@
                                                         <rect key="frame" x="151" y="161" width="145" height="1"/>
                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9nD-bu-qA6">
+                                                        <rect key="frame" x="140" y="208" width="20" height="20"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -641,6 +647,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dados do Cartão" id="WX2-ux-vaw"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="9nD-bu-qA6" id="cUQ-Re-PTy"/>
+                        <outlet property="buttonPayment" destination="QeZ-7P-Lvm" id="1M8-jT-KZH"/>
+                        <outlet property="textFieldExpireDate" destination="hoT-3Y-NJi" id="XVW-G7-If2"/>
+                        <outlet property="textFieldName" destination="fDs-kb-eKJ" id="Ugn-MI-e2B"/>
+                        <outlet property="textFieldNumber" destination="GlQ-0j-S1Q" id="neg-wi-RFE"/>
+                        <outlet property="textFieldSecurity" destination="IoE-fY-qHt" id="D4x-OX-MbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbB-ka-Cxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
