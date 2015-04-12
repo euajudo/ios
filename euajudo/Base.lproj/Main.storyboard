@@ -11,6 +11,14 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
             <string>Lato-Semibold</string>
@@ -168,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="1084" y="694"/>
         </scene>
-        <!--Login-->
+        <!--Entrar-->
         <scene sceneID="2H7-Df-0Gg">
             <objects>
                 <tableViewController id="B53-zg-BOU" customClass="LoginTableViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +194,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="iR6-Ka-9oW"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                     <state key="normal" title="Esqueceu sua senha?">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
@@ -216,7 +224,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="HPX-rM-9QN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -238,7 +247,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TvI-RK-pdD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -258,7 +268,7 @@
                             <outlet property="delegate" destination="B53-zg-BOU" id="7ak-Be-khb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="LZ6-S4-I3i"/>
+                    <navigationItem key="navigationItem" title="Entrar" id="LZ6-S4-I3i"/>
                     <connections>
                         <outlet property="email" destination="fYg-wR-047" id="2Tb-NR-ug6"/>
                         <outlet property="password" destination="Rhy-3C-scf" id="BVG-Pc-BEz"/>
@@ -458,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="-468" y="694"/>
         </scene>
-        <!--Cadastre-se-->
+        <!--Nova conta-->
         <scene sceneID="CJT-hn-2xp">
             <objects>
                 <tableViewController id="ewQ-qy-rX4" customClass="SignupTableViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -480,7 +490,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="sXP-xd-fRd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -501,7 +512,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Dxa-fu-d0h"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -522,7 +534,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="eXY-gV-F9n"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -543,7 +556,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="7z4-ux-Kjw"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -562,7 +576,7 @@
                             <outlet property="delegate" destination="ewQ-qy-rX4" id="O7K-pO-AwX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cadastre-se" id="LuM-Jn-NLH"/>
+                    <navigationItem key="navigationItem" title="Nova conta" id="LuM-Jn-NLH"/>
                     <connections>
                         <outlet property="email" destination="ejl-4b-Wzd" id="Ry0-F3-YsD"/>
                         <outlet property="name" destination="ZYp-Ds-9J1" id="hez-vx-zGa"/>
@@ -574,7 +588,7 @@
             </objects>
             <point key="canvasLocation" x="1296" y="-1080"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--Entrar-->
         <scene sceneID="JSz-0F-rMe">
             <objects>
                 <viewController id="jNZ-CK-k9x" customClass="AuthViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -587,12 +601,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhe-bk-5Q1">
-                                <rect key="frame" x="15" y="140" width="570" height="60"/>
+                                <rect key="frame" x="15" y="155" width="570" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.30588235294117649" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="X62-9b-IlE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <state key="normal" title="Já tenho uma conta">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -606,27 +620,13 @@
                                     <segue destination="B53-zg-BOU" kind="show" id="70O-UI-tMp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-BP-3Gv">
-                                <rect key="frame" x="15" y="550" width="570" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fKw-kP-HW9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <state key="normal" title="Criar conta">
-                                    <color key="titleColor" red="1" green="0.30588235289999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ewQ-qy-rX4" kind="show" id="wXg-oe-xCu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es6-Rs-aCl">
-                                <rect key="frame" x="15" y="72" width="570" height="60"/>
+                                <rect key="frame" x="15" y="87" width="570" height="60"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.36862745098039218" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Luw-gi-m3h"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <state key="normal" title="Entrar com o Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -637,21 +637,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLB-BP-3Gv">
+                                <rect key="frame" x="15" y="540" width="570" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fKw-kP-HW9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <state key="normal" title="Não tenho uma conta? Crie a sua conta aqui">
+                                    <color key="titleColor" red="1" green="0.30588235289999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ewQ-qy-rX4" kind="show" id="wXg-oe-xCu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Es6-Rs-aCl" firstAttribute="top" secondItem="6Vn-10-i5u" secondAttribute="bottom" constant="8" id="6mZ-2U-fKx"/>
+                            <constraint firstItem="Es6-Rs-aCl" firstAttribute="top" secondItem="6Vn-10-i5u" secondAttribute="bottom" constant="23" id="6mZ-2U-fKx"/>
                             <constraint firstAttribute="trailing" secondItem="Es6-Rs-aCl" secondAttribute="trailing" constant="15" id="EmX-0f-tU7"/>
                             <constraint firstItem="Es6-Rs-aCl" firstAttribute="leading" secondItem="i5k-tW-Poa" secondAttribute="leading" constant="15" id="NyX-cN-bju"/>
                             <constraint firstItem="Fhe-bk-5Q1" firstAttribute="top" secondItem="Es6-Rs-aCl" secondAttribute="bottom" constant="8" id="Y12-MF-sQC"/>
                             <constraint firstItem="PLB-BP-3Gv" firstAttribute="leading" secondItem="i5k-tW-Poa" secondAttribute="leading" constant="15" id="a1J-3v-Q5a"/>
-                            <constraint firstItem="vnm-z0-5cE" firstAttribute="top" secondItem="PLB-BP-3Gv" secondAttribute="bottom" constant="20" id="fph-bs-67y"/>
+                            <constraint firstItem="vnm-z0-5cE" firstAttribute="top" secondItem="PLB-BP-3Gv" secondAttribute="bottom" constant="30" id="fph-bs-67y"/>
                             <constraint firstAttribute="trailing" secondItem="PLB-BP-3Gv" secondAttribute="trailing" constant="15" id="h5v-vM-T0l"/>
                             <constraint firstAttribute="trailing" secondItem="Fhe-bk-5Q1" secondAttribute="trailing" constant="15" id="jDn-aL-wGr"/>
                             <constraint firstItem="Fhe-bk-5Q1" firstAttribute="leading" secondItem="i5k-tW-Poa" secondAttribute="leading" constant="15" id="jNw-qF-AYs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sxZ-qd-DRp">
+                    <navigationItem key="navigationItem" title="Entrar" id="sxZ-qd-DRp">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="pmM-v4-vIR">
                             <connections>
                                 <action selector="close:" destination="jNZ-CK-k9x" id="HeB-Wm-XkF"/>
@@ -663,10 +677,10 @@
             </objects>
             <point key="canvasLocation" x="344" y="-712"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="RC4-Mz-YfF">
             <objects>
-                <navigationController storyboardIdentifier="Auth" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5pH-p3-k4u" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Auth" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5pH-p3-k4u" customClass="BaseNavigationController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ipo-BT-nb5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
