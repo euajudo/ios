@@ -20,9 +20,12 @@ class CampaignGoalView: UIView {
     @IBOutlet weak var progress: UIView!
     
     func generatePercentage() {
-        let percentage = (campaign.targetValue / 100) * campaign.donatedValue
+        println(campaign.targetValue)
+        println(campaign.donatedValue)
+        let percentage = campaign.targetValue * (campaign.donatedValue / 100.0)
+        println(percentage)
         
-        let progressWidth = self.progressContainer.bounds.width * CGFloat((percentage / 100.0))
+        let progressWidth = self.progressContainer.bounds.width * CGFloat(percentage)
         
         self.progress.layer.frame = CGRect(x: 0.0, y: 0.0, width: progressWidth, height: self.progress.bounds.height)
     }
