@@ -42,6 +42,7 @@ class CampaignGoalView: UIView {
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
         formatter.currencySymbol = ""
+        formatter.maximumFractionDigits = 0
         
         labelActualValue.text = "R$ \(formatter.stringFromNumber(campaign.donatedValue)!)"
         labelFinalValue.text = "R$ \(formatter.stringFromNumber(campaign.targetValue)!)"
