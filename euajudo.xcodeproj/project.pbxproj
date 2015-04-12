@@ -22,7 +22,6 @@
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
 		418D00F31AD949C500BE105A /* euajudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00F21AD949C500BE105A /* euajudoTests.swift */; };
-		419C13EE1ADA102B004E1053 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419C13EC1ADA102B004E1053 /* Launch Screen.xib */; };
 		419C13F01ADA3B68004E1053 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C13EF1ADA3B68004E1053 /* SettingsTableViewController.swift */; };
 		419C13F21ADA66D3004E1053 /* PaymentInformationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C13F11ADA66D3004E1053 /* PaymentInformationsViewController.swift */; };
 		41A535C31AD97835008B9F6F /* CampaignsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */; };
@@ -66,7 +65,6 @@
 		418D00EC1AD949C500BE105A /* euajudoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = euajudoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418D00F11AD949C500BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00F21AD949C500BE105A /* euajudoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euajudoTests.swift; sourceTree = "<group>"; };
-		419C13ED1ADA102B004E1053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
 		419C13EF1ADA3B68004E1053 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Controller/SettingsTableViewController.swift; sourceTree = "<group>"; };
 		419C13F11ADA66D3004E1053 /* PaymentInformationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentInformationsViewController.swift; path = Controller/PaymentInformationsViewController.swift; sourceTree = "<group>"; };
 		41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsCollectionViewController.swift; path = Controller/CampaignsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				41C5F8361AD9C5B800B49C86 /* Views */,
 				418D00DC1AD949C400BE105A /* AppDelegate.swift */,
 				418D00E01AD949C400BE105A /* Main.storyboard */,
-				419C13EC1ADA102B004E1053 /* Launch Screen.xib */,
 				418D00E31AD949C400BE105A /* Images.xcassets */,
 				418D00DA1AD949C400BE105A /* Supporting Files */,
 			);
@@ -330,7 +327,6 @@
 				414EF9961ADA07550019DA57 /* Lato-Regular.ttf in Resources */,
 				414EF9971ADA07550019DA57 /* Lato-Semibold.ttf in Resources */,
 				418D00E21AD949C400BE105A /* Main.storyboard in Resources */,
-				419C13EE1ADA102B004E1053 /* Launch Screen.xib in Resources */,
 				41C5F8381AD9C5CF00B49C86 /* CampaignCell.xib in Resources */,
 				418D00E41AD949C400BE105A /* Images.xcassets in Resources */,
 			);
@@ -451,14 +447,6 @@
 				418D00E11AD949C400BE105A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		419C13EC1ADA102B004E1053 /* Launch Screen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				419C13ED1ADA102B004E1053 /* Base */,
-			);
-			name = "Launch Screen.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

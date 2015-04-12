@@ -25,6 +25,8 @@ class CampaignDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var imageViewPlayer: UIImageView!
+
     var footerView: UIView!
     
     override func viewDidLoad() {
@@ -40,6 +42,10 @@ class CampaignDetailViewController: UIViewController {
         }
 
         createFooterView()
+        
+        if campaign.mainMedia.videoUrl == nil {
+            imageViewPlayer.hidden = true
+        }
         
         // Add ProgressView
         let progressView = NSBundle.mainBundle().loadNibNamed("CampaignGoalView", owner: self, options: nil)[0] as! CampaignGoalView
