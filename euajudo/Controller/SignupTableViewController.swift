@@ -66,10 +66,6 @@ class SignupTableViewController: UITableViewController {
         self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBAction func close(sender: UIBarButtonItem) {
-        self.dismisSelf()
-    }
-    
     // MARK: Validations
     
     func areAllInputsValid() -> Bool {

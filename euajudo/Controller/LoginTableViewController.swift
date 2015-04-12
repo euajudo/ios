@@ -60,10 +60,6 @@ class LoginTableViewController: UITableViewController {
         self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func close(sender: UIBarButtonItem) {
-        self.dismissSelf()
-    }
-    
     @IBAction func forgotPassword(sender: UIButton) {
         // TODO: Show forgot password view
     }
