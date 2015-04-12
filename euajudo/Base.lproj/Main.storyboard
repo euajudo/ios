@@ -283,20 +283,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
-                                <rect key="frame" x="171" y="397" width="259" height="54"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
+                                <rect key="frame" x="168" y="94" width="264" height="131"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="259" id="2tt-C7-0v5"/>
-                                    <constraint firstAttribute="height" constant="54" id="R6X-ek-SoN"/>
+                                    <constraint firstAttribute="height" constant="131" id="EzZ-Ui-gLX"/>
+                                    <constraint firstAttribute="width" constant="264" id="kZ7-Lp-08G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                <state key="normal" title="AJUDAR">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPaymentPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="mHH-iH-3hs"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="100"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuZ-MN-mrj">
                                 <rect key="frame" x="167" y="250" width="266" height="125"/>
                                 <subviews>
@@ -337,20 +332,32 @@
                                     <constraint firstAttribute="width" constant="266" id="iAE-h8-ijX"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
-                                <rect key="frame" x="168" y="94" width="264" height="131"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
+                                <rect key="frame" x="171" y="390" width="259" height="54"/>
+                                <color key="backgroundColor" red="0.0" green="0.69803921568627447" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="131" id="EzZ-Ui-gLX"/>
-                                    <constraint firstAttribute="width" constant="264" id="kZ7-Lp-08G"/>
+                                    <constraint firstAttribute="width" constant="259" id="2tt-C7-0v5"/>
+                                    <constraint firstAttribute="height" constant="54" id="R6X-ek-SoN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="100"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <state key="normal" title="AJUDAR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonPaymentPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="mHH-iH-3hs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qW5-Qg-mHh" secondAttribute="centerX" id="6Vt-PH-Vyq"/>
-                            <constraint firstItem="qW5-Qg-mHh" firstAttribute="top" secondItem="WuZ-MN-mrj" secondAttribute="bottom" constant="22" id="C74-0q-i5i"/>
+                            <constraint firstItem="qW5-Qg-mHh" firstAttribute="top" secondItem="WuZ-MN-mrj" secondAttribute="bottom" constant="15" id="C74-0q-i5i"/>
                             <constraint firstAttribute="centerX" secondItem="WuZ-MN-mrj" secondAttribute="centerX" id="OUv-oz-Hoz"/>
                             <constraint firstAttribute="centerX" secondItem="7MX-j0-ADp" secondAttribute="centerX" id="cLv-ir-69f"/>
                             <constraint firstItem="WuZ-MN-mrj" firstAttribute="top" secondItem="7MX-j0-ADp" secondAttribute="bottom" constant="25" id="ghv-wg-4PD"/>
