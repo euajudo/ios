@@ -34,6 +34,23 @@ class CampaignCell: UICollectionViewCell {
         progressView.layoutSubviews()
         
         progressView?.campaign = campaign
+        
+        self.applyCardPattern()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.applyCardPattern()
+    }
+    
+    func applyCardPattern() {
+        let shadowPath = UIBezierPath(rect: self.containerView.bounds)
+        self.layer.masksToBounds = false;
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+        self.layer.shadowOpacity = 0.2;
+        self.layer.shadowPath = shadowPath.CGPath;
+        self.layer.cornerRadius = 3.0;
     }
     
     func updateInformations() {

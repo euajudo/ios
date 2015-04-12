@@ -133,7 +133,7 @@ extension CampaignsCollectionViewController: UICollectionViewDelegate {
 extension CampaignsCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(view.frame.size.width, 436.0)
+        return CGSizeMake(view.frame.size.width - 30, 436.0)
     }
     
 }
