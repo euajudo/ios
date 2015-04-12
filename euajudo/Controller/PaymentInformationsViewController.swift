@@ -30,7 +30,10 @@ class PaymentInformationsViewController: UIViewController {
         buttonPayment.setTitle("", forState: .Normal)
         activityIndicatorView.startAnimating()
         
-        dismissViewControllerAnimated(true, completion: nil)
+        unowned let weakSelf = self
+        API.connection.callMethodWithName("donate", parameters: [value!, campaign!._id]) { (response, error) -> Void in
+            weakSelf.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
 }

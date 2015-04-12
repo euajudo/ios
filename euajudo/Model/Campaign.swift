@@ -19,6 +19,7 @@ import Foundation
 
 class Campaign {
     
+    var _id: String!
     var name: String!
     var description: String!
     var createdAt: NSDate!
@@ -27,6 +28,7 @@ class Campaign {
     var url: String!
 
     init(dict: [String: AnyObject]) {
+        self._id = dict["_id"] as! String
         self.name = dict["name"] as! String
         self.description = dict["description"] as! String
         self.user = dict["user"] as! [String: String]
