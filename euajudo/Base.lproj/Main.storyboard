@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5pH-p3-k4u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZHZ-a3-SPd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -240,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNY-1L-xV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="-416"/>
+            <point key="canvasLocation" x="1296" y="-344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUr-y4-EK8">
@@ -440,12 +440,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzI-o6-FFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="-1152"/>
+            <point key="canvasLocation" x="1296" y="-1080"/>
         </scene>
-        <!--View Controller-->
+        <!--Auth View Controller-->
         <scene sceneID="JSz-0F-rMe">
             <objects>
-                <viewController id="jNZ-CK-k9x" sceneMemberID="viewController">
+                <viewController id="jNZ-CK-k9x" customClass="AuthViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Vn-10-i5u"/>
                         <viewControllerLayoutGuide type="bottom" id="vnm-z0-5cE"/>
@@ -520,17 +520,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sxZ-qd-DRp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="pmM-v4-vIR"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="pmM-v4-vIR">
+                            <connections>
+                                <action selector="close:" destination="jNZ-CK-k9x" id="HeB-Wm-XkF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBF-ah-9ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-817" y="-784"/>
+            <point key="canvasLocation" x="344" y="-712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RC4-Mz-YfF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5pH-p3-k4u" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Auth" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5pH-p3-k4u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ipo-BT-nb5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -543,7 +547,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59R-9U-M7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1629" y="-784"/>
+            <point key="canvasLocation" x="-468" y="-712"/>
         </scene>
     </scenes>
     <resources>

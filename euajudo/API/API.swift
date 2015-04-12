@@ -38,7 +38,7 @@ class API {
     }
     
     func authWithEmail(email: String, password: String, completion: METLogInCompletionHandler) {
-        API.connection.loginWithEmail(email, password: email) { (error) -> Void in
+        API.connection.loginWithEmail(email, password: password) { (error) -> Void in
             completion(error)
         }
     }

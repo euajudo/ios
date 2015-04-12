@@ -44,6 +44,8 @@ class SignupTableViewController: UITableViewController {
             
             API.sharedInstance.signUpWith(params: params, completion: { (error) -> Void in
                 if let err = error {
+                    self.stopLoading()
+                    
                     let signUpErrorAlert = UIAlertController(title: "Oops!",
                         message: "Ocorreu algum problema durante seu cadastro, tente novamente.",
                         preferredStyle: .Alert)
@@ -55,10 +57,31 @@ class SignupTableViewController: UITableViewController {
                 } else {
                     let email = params["email"] as String!
                     let password = params["password"] as String!
-                    
-                    
+
+                    self.loginWithEmail(email, password: password)
                 }
             })
+        }
+    }
+    
+    func loginWithEmail(email: String, password: String) {
+        API.sharedInstance.authWithEmail(email, password: password) { (error) -> Void in
+            self.stopLoading()
+            
+            if let err = error {
+                let loginErrorAlert = UIAlertController(title: "Oops!",
+                    message: "Houve um problema em sua autenticação.",
+                    preferredStyle: .Alert)
+                
+                let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                loginErrorAlert.addAction(confirmAction)
+                
+                self.presentViewController(loginErrorAlert, animated: true, completion:  { () -> Void in
+                    self.navigationController!.popViewControllerAnimated(true)
+                })
+            } else {
+                self.dismisSelf()
+            }
         }
     }
     
