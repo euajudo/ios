@@ -72,7 +72,8 @@ class CampaignDetailViewController: UIViewController {
         let footerViewButton = UIButton(frame: CGRectMake(15, 15, width - 30, 44))
         footerViewButton.layer.cornerRadius = 5
         footerViewButton.setTitle("AJUDAR CAMPANHA", forState: .Normal)
-        footerViewButton.backgroundColor = UIColor.greenColor()
+        footerViewButton.backgroundColor = UIColor(red: 0, green: 178.0/255, blue: 0, alpha: 1)
+        footerViewButton.titleLabel?.font = UIFont(name: "Lato-Bold", size: 16)
         footerViewButton.addTarget(self, action: "buttonDonatePressed:", forControlEvents: .TouchUpInside)
         footerView.addSubview(footerViewButton)
         

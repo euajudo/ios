@@ -13,10 +13,22 @@ class DonateViewController: UIViewController {
     var campaign: Campaign!
     var isPaymentMonthly: Bool = true
     
+    @IBOutlet weak var textFieldValue: UITextField!
+
     @IBOutlet weak var buttonPaymentMonthly: UIButton!
     @IBOutlet weak var buttonPaymentOnce: UIButton!
 
+    @IBOutlet weak var imageViewRadioMonthly: UIImageView!
+    @IBOutlet weak var imageViewRadioOnce: UIImageView!
     
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        textFieldValue.font = UIFont(name: "Lato-Regular", size: 100)
+    }
+
+
     // MARK: IBAction
     
     @IBAction func buttonPaymentMonthlyPressed(sender: AnyObject) {
@@ -24,6 +36,9 @@ class DonateViewController: UIViewController {
         buttonPaymentOnce.enabled = true
         
         isPaymentMonthly = true
+        
+        imageViewRadioMonthly.image = UIImage(named: "Radio-On")
+        imageViewRadioOnce.image = UIImage(named: "Radio-Off")
     }
     
     @IBAction func buttonPaymentOncePressed(sender: AnyObject) {
@@ -31,6 +46,9 @@ class DonateViewController: UIViewController {
         buttonPaymentOnce.enabled = false
     
         isPaymentMonthly = false
+        
+        imageViewRadioMonthly.image = UIImage(named: "Radio-Off")
+        imageViewRadioOnce.image = UIImage(named: "Radio-On")
     }
     
     @IBAction func buttonClosePressed(sender: AnyObject) {

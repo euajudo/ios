@@ -8,8 +8,12 @@
         <mutableArray key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
             <string>Lato-Semibold</string>
         </mutableArray>
     </customFonts>
@@ -279,53 +283,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
-                                <rect key="frame" x="168" y="94" width="264" height="131"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
+                                <rect key="frame" x="171" y="397" width="259" height="54"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="264" id="JbB-Al-Y9y"/>
-                                    <constraint firstAttribute="height" constant="131" id="iTh-Yz-zX5"/>
+                                    <constraint firstAttribute="width" constant="259" id="2tt-C7-0v5"/>
+                                    <constraint firstAttribute="height" constant="54" id="R6X-ek-SoN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
-                                <rect key="frame" x="276" y="518" width="49" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bO7-gc-oBb"/>
-                                    <constraint firstAttribute="width" constant="49" id="p1r-FI-eq0"/>
-                                </constraints>
-                                <state key="normal" title="Ajudar!">
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <state key="normal" title="AJUDAR">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPaymentPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="mHH-iH-3hs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-nI-Jcp">
-                                <rect key="frame" x="75" y="376" width="141" height="30"/>
-                                <state key="normal" title="Ajudar mensalmente">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPaymentMonthlyPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="Q9l-or-0Co"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-Nv-XnI">
-                                <rect key="frame" x="75" y="414" width="147" height="30"/>
-                                <state key="normal" title="Ajudar uma única vez">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPaymentOncePressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="z1o-CW-duW"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuZ-MN-mrj">
+                                <rect key="frame" x="167" y="250" width="266" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-Nv-XnI">
+                                        <rect key="frame" x="21" y="77" width="225" height="30"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Ajudar uma única vez">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPaymentOncePressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="z1o-CW-duW"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Radio-On" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-00-yHq">
+                                        <rect key="frame" x="32" y="29" width="24" height="24"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Radio-Off" translatesAutoresizingMaskIntoConstraints="NO" id="9OQ-jN-IsD">
+                                        <rect key="frame" x="32" y="80" width="24" height="24"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-nI-Jcp">
+                                        <rect key="frame" x="21" y="19" width="225" height="44"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Ajudar mensalmente">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPaymentMonthlyPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="Q9l-or-0Co"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="8nK-tN-cpK"/>
+                                    <constraint firstAttribute="width" constant="266" id="iAE-h8-ijX"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
+                                <rect key="frame" x="168" y="94" width="264" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="EzZ-Ui-gLX"/>
+                                    <constraint firstAttribute="width" constant="264" id="kZ7-Lp-08G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="100"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7MX-j0-ADp" firstAttribute="top" secondItem="f8m-0P-1oy" secondAttribute="bottom" constant="30" id="LCK-Un-EE3"/>
-                            <constraint firstItem="qW5-Qg-mHh" firstAttribute="top" secondItem="7MX-j0-ADp" secondAttribute="bottom" constant="60" id="sLT-oW-wFV"/>
-                            <constraint firstAttribute="centerX" secondItem="7MX-j0-ADp" secondAttribute="centerX" id="sZc-da-mkD"/>
-                            <constraint firstAttribute="centerX" secondItem="qW5-Qg-mHh" secondAttribute="centerX" id="zns-XS-w4J"/>
+                            <constraint firstAttribute="centerX" secondItem="qW5-Qg-mHh" secondAttribute="centerX" id="6Vt-PH-Vyq"/>
+                            <constraint firstItem="qW5-Qg-mHh" firstAttribute="top" secondItem="WuZ-MN-mrj" secondAttribute="bottom" constant="22" id="C74-0q-i5i"/>
+                            <constraint firstAttribute="centerX" secondItem="WuZ-MN-mrj" secondAttribute="centerX" id="OUv-oz-Hoz"/>
+                            <constraint firstAttribute="centerX" secondItem="7MX-j0-ADp" secondAttribute="centerX" id="cLv-ir-69f"/>
+                            <constraint firstItem="WuZ-MN-mrj" firstAttribute="top" secondItem="7MX-j0-ADp" secondAttribute="bottom" constant="25" id="ghv-wg-4PD"/>
+                            <constraint firstItem="7MX-j0-ADp" firstAttribute="top" secondItem="f8m-0P-1oy" secondAttribute="bottom" constant="30" id="pzh-7H-1ge"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BF5-8t-VaW">
@@ -338,6 +367,9 @@
                     <connections>
                         <outlet property="buttonPaymentMonthly" destination="Azq-nI-Jcp" id="6kv-7P-S5T"/>
                         <outlet property="buttonPaymentOnce" destination="QDe-Nv-XnI" id="bqq-Ao-JgY"/>
+                        <outlet property="imageViewRadioMonthly" destination="Iwe-00-yHq" id="BET-2y-lto"/>
+                        <outlet property="imageViewRadioOnce" destination="9OQ-jN-IsD" id="M47-eI-Wnp"/>
+                        <outlet property="textFieldValue" destination="7MX-j0-ADp" id="BeF-fe-fNN"/>
                         <segue destination="CQd-I0-Jvv" kind="show" identifier="Payment" id="RUj-7u-TYh"/>
                     </connections>
                 </viewController>
@@ -605,5 +637,7 @@
     </scenes>
     <resources>
         <image name="Miyagi" width="460" height="320"/>
+        <image name="Radio-Off" width="24" height="24"/>
+        <image name="Radio-On" width="24" height="24"/>
     </resources>
 </document>
