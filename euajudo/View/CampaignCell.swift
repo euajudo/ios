@@ -17,6 +17,7 @@ class CampaignCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var playImage: UIImageView!
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
@@ -34,6 +35,33 @@ class CampaignCell: UICollectionViewCell {
         progressView.layoutSubviews()
         
         progressView?.campaign = campaign
+        
+        self.applyCardPattern()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.applyCardPattern()
+        
+        switch self.campaign!.mainMedia.type {
+        case .Image:
+            self.playImage.alpha = 0.0
+        case .Video:
+            self.playImage.alpha = 1.0
+        }
+    }
+    
+    func applyCardPattern() {
+        let shadowPath = UIBezierPath(rect: self.containerView.bounds)
+        self.layer.masksToBounds = false;
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+        self.layer.shadowOpacity = 0.2;
+        self.layer.shadowPath = shadowPath.CGPath;
+        self.layer.cornerRadius = 3.0;
+        
+        self.contentView.layer.cornerRadius = 1.5
+        self.contentView.clipsToBounds = true
     }
     
     func updateInformations() {
