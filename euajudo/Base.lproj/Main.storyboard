@@ -561,7 +561,7 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DD/MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoT-3Y-NJi">
-                                                        <rect key="frame" x="8" y="119" width="133" height="30"/>
+                                                        <rect key="frame" x="8" y="119" width="102" height="30"/>
                                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
