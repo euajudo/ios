@@ -82,7 +82,9 @@ class CampaignsCollectionViewController: UICollectionViewController {
     // MARK: - IBAction
     
     @IBAction func buttonProfilePressed(sender: AnyObject) {
-        showAuth()
+        if !API.sharedInstance.isLogged() {
+            showAuth()
+        }
     }
     
     @IBAction func buttonSettingsPressed(sender: AnyObject) {
