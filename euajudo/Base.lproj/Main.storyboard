@@ -289,6 +289,7 @@
                                     <constraint firstAttribute="height" constant="131" id="EzZ-Ui-gLX"/>
                                     <constraint firstAttribute="width" constant="264" id="kZ7-Lp-08G"/>
                                 </constraints>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="100"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
