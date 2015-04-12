@@ -15,6 +15,8 @@ class CampaignDetailViewController: UIViewController {
     
     var campaign: Campaign!
 
+    @IBOutlet weak var viewProgressView: UIView!
+
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelReceiverName: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
@@ -38,6 +40,12 @@ class CampaignDetailViewController: UIViewController {
         }
 
         createFooterView()
+        
+        // Add ProgressView
+        let progressView = NSBundle.mainBundle().loadNibNamed("CampaignGoalView", owner: self, options: nil)[0] as! CampaignGoalView
+        progressView.campaign = campaign
+        progressView.frame = CGRectMake(0, 0, viewProgressView.frame.size.width, viewProgressView.frame.size.height)
+        viewProgressView.addSubview(progressView)
 
         // Add tap to imageView
         let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "imageViewPressed:")
