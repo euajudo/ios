@@ -34,11 +34,40 @@ class SignupTableViewController: UITableViewController {
     // MARK: - Actions
     
     func signUp(signUp: UIBarButtonItem) {
-        
+        if self.areAllInputsValid() {
+            self.startLoading()
+            
+            let params = ["name": self.name.text,
+                          "email": self.email.text,
+                          "password": self.password.text,
+                          "passwordConfirmation": self.passwordConfirmation.text]
+            
+            API.sharedInstance.signUpWith(params: params, completion: { (error) -> Void in
+                if let err = error {
+                    let signUpErrorAlert = UIAlertController(title: "Oops!",
+                        message: "Ocorreu algum problema durante seu cadastro, tente novamente.",
+                        preferredStyle: .Alert)
+                    
+                    let confirmAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                    signUpErrorAlert.addAction(confirmAction)
+                    
+                    self.presentViewController(signUpErrorAlert, animated: true, completion: nil)
+                } else {
+                    let email = params["email"] as String!
+                    let password = params["password"] as String!
+                    
+                    
+                }
+            })
+        }
+    }
+    
+    func dismisSelf() {
+        self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
     }
 
     @IBAction func close(sender: UIBarButtonItem) {
-        
+        self.dismisSelf()
     }
     
     // MARK: Validations

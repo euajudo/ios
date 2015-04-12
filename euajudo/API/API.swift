@@ -31,6 +31,12 @@ class API {
     
     // MARK: - Auth
     
+    func signUpWith(#params: [String: AnyObject], completion: METLogInCompletionHandler) {
+        API.connection.callMethodWithName("newPerson", parameters: [params]) { (response, error) -> Void in
+            completion(error)
+        }
+    }
+    
     func authWithEmail(email: String, password: String, completion: METLogInCompletionHandler) {
         API.connection.loginWithEmail(email, password: email) { (error) -> Void in
             completion(error)
