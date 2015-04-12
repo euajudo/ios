@@ -13,6 +13,9 @@
 		414EF9951ADA07550019DA57 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8451ADA039800B49C86 /* Lato-Light.ttf */; };
 		414EF9961ADA07550019DA57 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8461ADA039800B49C86 /* Lato-Regular.ttf */; };
 		414EF9971ADA07550019DA57 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8471ADA039800B49C86 /* Lato-Semibold.ttf */; };
+		0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */; };
+		03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */; };
+		03F562E61AD9FDD600A9CD3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */; };
 		418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00DC1AD949C400BE105A /* AppDelegate.swift */; };
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
@@ -44,6 +47,9 @@
 		0381C26C1AD99511004E4172 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Media.swift; path = Model/Media.swift; sourceTree = "<group>"; };
 		0381C26E1AD99580004E4172 /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MediaType.swift; path = Model/MediaType.swift; sourceTree = "<group>"; };
 		0381C2701AD99D6B004E4172 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = "<group>"; };
+		0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTableViewController.swift; path = Controller/LoginTableViewController.swift; sourceTree = "<group>"; };
+		03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupTableViewController.swift; path = Controller/SignupTableViewController.swift; sourceTree = "<group>"; };
+		03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controller/AuthViewController.swift; sourceTree = "<group>"; };
 		28B6E6A9B9D47D05A39EB3CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		32B3F7B71F66681EA0640FAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		418D00D71AD949C400BE105A /* euajudo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euajudo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +172,10 @@
 			children = (
 				41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */,
 				41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */,
+				0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */,
+				03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */,
 				41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */,
+				03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */,
 				41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */,
 			);
 			name = Controllers;
@@ -378,14 +387,17 @@
 			files = (
 				41A535C31AD97835008B9F6F /* CampaignsCollectionViewController.swift in Sources */,
 				418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */,
+				0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */,
 				41C5F83A1AD9C61C00B49C86 /* CampaignCell.swift in Sources */,
 				0381C26D1AD99511004E4172 /* Media.swift in Sources */,
 				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
 				0381C26F1AD99580004E4172 /* MediaType.swift in Sources */,
 				41A535C51AD9783D008B9F6F /* API.swift in Sources */,
+				03F562E61AD9FDD600A9CD3D /* AuthViewController.swift in Sources */,
 				41C5F83E1AD9F83100B49C86 /* BaseNavigationController.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 				41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */,
+				03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */,
 				41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
