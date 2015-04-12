@@ -37,9 +37,9 @@ class CampaignDetailViewController: UIViewController {
         campaign.mainMedia.image { (image) -> Void in
             weakSelf.imageView.image = image
         }
-        
+
         createFooterView()
-        
+
         // Add tap to imageView
         let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "imageViewPressed:")
         imageView.addGestureRecognizer(tapImageViewGesture)

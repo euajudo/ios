@@ -34,7 +34,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Campaigns Collection View Controller-->
+        <!--Home-->
         <scene sceneID="aEZ-3u-XPe">
             <objects>
                 <collectionViewController id="YjN-3S-qFd" customClass="CampaignsCollectionViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="YjN-3S-qFd" id="Pmc-hW-rCh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="wRi-yd-rV4">
+                    <navigationItem key="navigationItem" title="Home" id="wRi-yd-rV4">
                         <barButtonItem key="leftBarButtonItem" image="Settings" id="cwX-e0-NqF">
                             <connections>
                                 <action selector="buttonSettingsPressed:" destination="YjN-3S-qFd" id="BVK-jA-I7M"/>
