@@ -18,5 +18,3 @@
 #import <SDWebImage/SDImageCache.h>
 
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
-
-#import <MMMarkdown/MMMarkdown.h>
