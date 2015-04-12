@@ -4,6 +4,7 @@ PODS:
     - InflectorKit
     - PocketSocket
     - SimpleKeychain
+  - MMMarkdown (0.4.1)
   - PocketSocket (0.6.4)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
@@ -13,12 +14,14 @@ PODS:
 
 DEPENDENCIES:
   - Meteor
+  - MMMarkdown
   - SDWebImage
   - XCDYouTubeKit (~> 2.1.1)
 
 SPEC CHECKSUMS:
   InflectorKit: 64497199e6764f4d8337cab7f700a77b13d76a73
   Meteor: bf6d174608167b138ee44959309e3a8a7561fd83
+  MMMarkdown: c2e8b7aa155ae7feb72ed288b2915de81734e914
   PocketSocket: eee7ef375f55b98e7ca79e097d9c61fd688e9494
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SimpleKeychain: 8de48eb1de10c6403911a6be52e127e5b5d31404

@@ -18,7 +18,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Campanhas-->
+        <!--Campaigns Collection View Controller-->
         <scene sceneID="aEZ-3u-XPe">
             <objects>
                 <collectionViewController id="YjN-3S-qFd" customClass="CampaignsCollectionViewController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,8 +38,21 @@
                             <outlet property="delegate" destination="YjN-3S-qFd" id="Pmc-hW-rCh"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Campanhas" id="wRi-yd-rV4"/>
+                    <navigationItem key="navigationItem" id="wRi-yd-rV4">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="cwX-e0-NqF">
+                            <connections>
+                                <action selector="buttonSettingsPressed:" destination="YjN-3S-qFd" id="BVK-jA-I7M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="User" id="YWm-HH-57Q">
+                            <connections>
+                                <action selector="buttonProfilePressed:" destination="YjN-3S-qFd" id="ICm-Mc-4Zl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonProfile" destination="YWm-HH-57Q" id="CwT-O1-Cfu"/>
+                        <outlet property="buttonSettings" destination="cwX-e0-NqF" id="1ix-cI-0kf"/>
                         <segue destination="564-cH-uAu" kind="show" identifier="Campaign" id="Yx3-PI-viT"/>
                     </connections>
                 </collectionViewController>
@@ -63,19 +76,10 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fja-XK-Ouk" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="518"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="524"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do projeto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHv-l6-cKD">
-                                                <rect key="frame" x="18" y="15" width="564" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hId-XY-MSr"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
-                                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empresa responsável" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eV-LI-DyD">
-                                                <rect key="frame" x="18" y="36" width="564" height="21"/>
+                                                <rect key="frame" x="18" y="42" width="564" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Se5-3I-vve"/>
                                                 </constraints>
@@ -84,17 +88,26 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Miyagi" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-7Q-1as">
-                                                <rect key="frame" x="0.0" y="75" width="600" height="320"/>
+                                                <rect key="frame" x="0.0" y="81" width="600" height="320"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mWL-7Q-1as" secondAttribute="height" multiplier="15:8" id="P97-vb-ALA"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-iJ-zif">
-                                                <rect key="frame" x="18" y="408" width="564" height="21"/>
+                                                <rect key="frame" x="18" y="414" width="564" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Anp-kc-T4z"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do projeto" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHv-l6-cKD">
+                                                <rect key="frame" x="18" y="15" width="564" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="hId-XY-MSr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="22"/>
                                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -121,7 +134,7 @@
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="width" secondItem="Dnf-IE-ohD" secondAttribute="width" id="RRr-dj-5YX"/>
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="leading" secondItem="Dnf-IE-ohD" secondAttribute="leading" id="bm5-oU-kEL"/>
                                     <constraint firstItem="fja-XK-Ouk" firstAttribute="top" secondItem="Dnf-IE-ohD" secondAttribute="top" id="qIO-bD-vf0"/>
-                                    <constraint firstAttribute="bottom" secondItem="fja-XK-Ouk" secondAttribute="bottom" constant="87" id="vJ4-rs-ZPa"/>
+                                    <constraint firstAttribute="bottom" secondItem="fja-XK-Ouk" secondAttribute="bottom" constant="18" id="vJ4-rs-ZPa"/>
                                     <constraint firstAttribute="trailing" secondItem="fja-XK-Ouk" secondAttribute="trailing" id="xhN-JO-6qm"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="74"/>
@@ -673,5 +686,7 @@
         <image name="Miyagi" width="460" height="320"/>
         <image name="Radio-Off" width="24" height="24"/>
         <image name="Radio-On" width="24" height="24"/>
+        <image name="Settings" width="25" height="25"/>
+        <image name="User" width="25" height="25"/>
     </resources>
 </document>

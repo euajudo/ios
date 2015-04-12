@@ -16,6 +16,9 @@ class CampaignsCollectionViewController: UICollectionViewController {
 
     var campaigns = [Campaign]()
     
+    @IBOutlet weak var buttonProfile: UIBarButtonItem!
+    @IBOutlet weak var buttonSettings: UIBarButtonItem!
+    
     lazy var refreshControl: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.addTarget(self, action: "refreshControlUpdateStatus:", forControlEvents: .ValueChanged)
@@ -73,6 +76,17 @@ class CampaignsCollectionViewController: UICollectionViewController {
     func showAuth() {
         let auth = self.storyboard!.instantiateViewControllerWithIdentifier("Auth") as! UINavigationController
         self.presentViewController(auth, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - IBAction
+    
+    @IBAction func buttonProfilePressed(sender: AnyObject) {
+        showAuth()
+    }
+    
+    @IBAction func buttonSettingsPressed(sender: AnyObject) {
+        
     }
     
 }
