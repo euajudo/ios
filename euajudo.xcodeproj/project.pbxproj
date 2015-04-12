@@ -16,11 +16,14 @@
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
 		418D00E71AD949C400BE105A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E51AD949C400BE105A /* LaunchScreen.xib */; };
 		418D00F31AD949C500BE105A /* euajudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00F21AD949C500BE105A /* euajudoTests.swift */; };
-		41A535C31AD97835008B9F6F /* CampaignsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */; };
+		41A535C31AD97835008B9F6F /* CampaignsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */; };
 		41A535C51AD9783D008B9F6F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C41AD9783D008B9F6F /* API.swift */; };
 		41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C71AD978FC008B9F6F /* Campaign.swift */; };
 		41A535CA1AD97B31008B9F6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C91AD97B31008B9F6F /* User.swift */; };
 		41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */; };
+		41C5F8381AD9C5CF00B49C86 /* CampaignCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8371AD9C5CF00B49C86 /* CampaignCell.xib */; };
+		41C5F83A1AD9C61C00B49C86 /* CampaignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */; };
+		41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */; };
 		9ED78EFCE71D4EF4940EA503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3369FED058ECE7A510AA13 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -51,11 +54,14 @@
 		418D00EC1AD949C500BE105A /* euajudoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = euajudoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418D00F11AD949C500BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00F21AD949C500BE105A /* euajudoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euajudoTests.swift; sourceTree = "<group>"; };
-		41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsTableViewController.swift; path = Controller/CampaignsTableViewController.swift; sourceTree = "<group>"; };
+		41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsCollectionViewController.swift; path = Controller/CampaignsCollectionViewController.swift; sourceTree = "<group>"; };
 		41A535C41AD9783D008B9F6F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
 		41A535C71AD978FC008B9F6F /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Campaign.swift; path = Model/Campaign.swift; sourceTree = "<group>"; };
 		41A535C91AD97B31008B9F6F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignDetailViewController.swift; path = Controller/CampaignDetailViewController.swift; sourceTree = "<group>"; };
+		41C5F8371AD9C5CF00B49C86 /* CampaignCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CampaignCell.xib; path = View/CampaignCell.xib; sourceTree = "<group>"; };
+		41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignCell.swift; path = View/CampaignCell.swift; sourceTree = "<group>"; };
+		41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateViewController.swift; path = Controller/DonateViewController.swift; sourceTree = "<group>"; };
 		AA3369FED058ECE7A510AA13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,9 +107,10 @@
 		418D00D91AD949C400BE105A /* euajudo */ = {
 			isa = PBXGroup;
 			children = (
-				41A535C61AD978D7008B9F6F /* Model */,
 				41A535BF1AD97573008B9F6F /* Controllers */,
+				41A535C61AD978D7008B9F6F /* Model */,
 				41A535BE1AD97566008B9F6F /* API */,
+				41C5F8361AD9C5B800B49C86 /* Views */,
 				418D00DC1AD949C400BE105A /* AppDelegate.swift */,
 				418D00E01AD949C400BE105A /* Main.storyboard */,
 				418D00E51AD949C400BE105A /* LaunchScreen.xib */,
@@ -150,10 +157,11 @@
 		41A535BF1AD97573008B9F6F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				41A535C21AD97835008B9F6F /* CampaignsTableViewController.swift */,
+				41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */,
 				41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */,
 				0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */,
 				03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */,
+				41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -167,6 +175,15 @@
 				0381C26E1AD99580004E4172 /* MediaType.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		41C5F8361AD9C5B800B49C86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41C5F8371AD9C5CF00B49C86 /* CampaignCell.xib */,
+				41C5F8391AD9C61C00B49C86 /* CampaignCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		7C1B64479151AEA6FB2F2CF1 /* Frameworks */ = {
@@ -270,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418D00E21AD949C400BE105A /* Main.storyboard in Resources */,
+				41C5F8381AD9C5CF00B49C86 /* CampaignCell.xib in Resources */,
 				418D00E71AD949C400BE105A /* LaunchScreen.xib in Resources */,
 				418D00E41AD949C400BE105A /* Images.xcassets in Resources */,
 			);
@@ -337,9 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A535C31AD97835008B9F6F /* CampaignsTableViewController.swift in Sources */,
+				41A535C31AD97835008B9F6F /* CampaignsCollectionViewController.swift in Sources */,
 				418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */,
 				0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */,
+				41C5F83A1AD9C61C00B49C86 /* CampaignCell.swift in Sources */,
 				0381C26D1AD99511004E4172 /* Media.swift in Sources */,
 				41A535CA1AD97B31008B9F6F /* User.swift in Sources */,
 				0381C26F1AD99580004E4172 /* MediaType.swift in Sources */,
@@ -347,6 +366,7 @@
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
 				41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */,
 				03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */,
+				41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

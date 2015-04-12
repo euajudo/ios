@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import XCDYouTubeKit
 
+let footerViewHeight: CGFloat = 74
 
 class CampaignDetailViewController: UIViewController {
     
-    var campaign: Campaign?
+    var campaign: Campaign!
 
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelReceiverName: UILabel!
@@ -21,15 +23,25 @@ class CampaignDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    var footerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelTitle.text = "Lorem ipsum Deserunt adipisicing ad irure dolor in qui laborum Duis minim culpa velit ex sed dolore."
+        labelTitle.text = campaign.name
+        labelReceiverName.text = campaign.user["name"]
+        labelDescription.text = campaign.description
         
-        labelReceiverName.text = "Lorem ipsum Deserunt adipisicing ad irure dolor in qui laborum Duis minim culpa velit ex sed dolore."
+        unowned let weakSelf = self
+        campaign.mainMedia.image { (image) -> Void in
+            weakSelf.imageView.image = image
+        }
         
-        labelDescription.text = "Lorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute.\n\nLorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute.\n\nLorem ipsum In nostrud sit fugiat ut ullamco nisi id in elit aliquip commodo veniam velit proident anim elit in labore mollit voluptate incididunt non velit voluptate irure cillum officia cillum ad irure elit reprehenderit sed adipisicing irure eiusmod in nostrud aliquip proident ea consectetur consequat aliquip Excepteur in qui in labore cupidatat laborum aliquip non laborum aute exercitation exercitation occaecat ut aliqua et non Ut est incididunt magna dolore adipisicing Excepteur fugiat laborum dolore dolor Excepteur dolore dolore quis laborum tempor quis Excepteur officia quis consectetur adipisicing quis laboris mollit in sunt anim magna ullamco Excepteur non sit reprehenderit ut anim cupidatat commodo do do non magna eiusmod incididunt laboris sint sit in incididunt minim nostrud eiusmod qui in exercitation dolore irure Duis velit aliqua dolore in amet veniam mollit minim enim dolor voluptate occaecat pariatur dolor est commodo in do nisi esse in aute Excepteur laborum do esse culpa laborum nulla aute nulla anim ex in nisi amet enim aute."
+        createFooterView()
+        
+        // Add tap to imageView
+        let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "imageViewPressed:")
+        imageView.addGestureRecognizer(tapImageViewGesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -37,12 +49,56 @@ class CampaignDetailViewController: UIViewController {
         self.scrollView.contentSize = self.contentView.frame.size
     }
     
+    // MARK: FooterView
+    
+    func createFooterView() {
+        let frame = self.view.frame
+        let top = frame.size.height - footerViewHeight
+        let width = frame.size.width
+        
+        footerView = UIView(frame: CGRectMake(0, top, frame.size.width, footerViewHeight))
+        footerView.backgroundColor = UIColor.clearColor()
+        
+        let footerViewBackground = UIView(frame: CGRectMake(0, 0, width, footerViewHeight))
+        footerViewBackground.backgroundColor = UIColor.whiteColor()
+        footerViewBackground.alpha = 0.8
+        footerView.addSubview(footerViewBackground)
+        
+        let footerViewButton = UIButton(frame: CGRectMake(15, 15, width - 30, 44))
+        footerViewButton.setTitle("DOAR", forState: .Normal)
+        footerViewButton.backgroundColor = UIColor.greenColor()
+        footerViewButton.addTarget(self, action: "buttonDonatePressed:", forControlEvents: .TouchUpInside)
+        footerView.addSubview(footerViewButton)
+        
+        view.addSubview(footerView)
+    }
+    
     
     // MARK: IBAction
 
     @IBAction func buttonSharePressed(sender: AnyObject) {
-        let objectsToShare = ["Foobar"]
+        let objectsToShare = [campaign.url]
         let activity = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         self.presentViewController(activity, animated: true, completion: nil)
+    }
+    
+    func imageViewPressed(sender: AnyObject) {
+        if campaign.mainMedia.videoUrl == nil {
+            return
+        }
+        
+        let movie = XCDYouTubeVideoPlayerViewController(videoIdentifier: campaign.mainMedia.videoUrl)
+        self.presentMoviePlayerViewControllerAnimated(movie)
+    }
+    
+    func buttonDonatePressed(sender: AnyObject) {
+        let nav = storyboard?.instantiateViewControllerWithIdentifier("Donate") as! UINavigationController
+
+        if let controller = nav.viewControllers[0] as? DonateViewController {
+            controller.campaign = campaign
+
+            nav.modalPresentationStyle = .FormSheet
+            self.presentViewController(nav, animated: true, completion: nil)
+        }
     }
 }

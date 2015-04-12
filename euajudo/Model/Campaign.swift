@@ -23,12 +23,19 @@ class Campaign {
     var description: String!
     var createdAt: NSDate!
     var mainMedia: Media!
+    var user: [String: String]!
+    var url: String!
 
     init(dict: [String: AnyObject]) {
         self.name = dict["name"] as! String
         self.description = dict["description"] as! String
+        self.user = dict["user"] as! [String: String]
+        self.url = dict["canonicalUrl"] as! String
         self.createdAt = NSDate()
-        self.mainMedia = Media()
+        
+        if let media = dict["mainMedia"] as? [String: AnyObject] {
+            self.mainMedia = Media(dict: media)
+        }
     }
 
 }

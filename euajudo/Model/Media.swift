@@ -21,21 +21,16 @@ struct Media {
     
     var type: MediaType!
     var url: String!
-    var thumbUrl: String?
+    var videoUrl: String?
     
     private let manager = SDWebImageManager.sharedManager()
-    
-    init() {
-        self.type = .Image
-        self.url = "http://p1.pichost.me/i/65/1900412.jpg"
-    }
-    
-    init(jsonMedia: [String: AnyObject]) {
-        self.type = MediaType(rawValue: jsonMedia["type"] as! String)
-        self.url = jsonMedia["url"] as! String
+
+    init(dict: [String: AnyObject]) {
+        self.type = MediaType(rawValue: dict["type"] as! String)
+        self.url = dict["url"] as! String
         
-        if let thumbUrl = jsonMedia["thumb_url"] as? String {
-            self.thumbUrl = thumbUrl
+        if let video = dict["videoUrl"] as? String {
+            self.videoUrl = video
         }
     }
     
