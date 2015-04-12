@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0381C26D1AD99511004E4172 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26C1AD99511004E4172 /* Media.swift */; };
 		0381C26F1AD99580004E4172 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C26E1AD99580004E4172 /* MediaType.swift */; };
+		0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */; };
+		03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */; };
+		03F562E61AD9FDD600A9CD3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */; };
 		414EF9941ADA07550019DA57 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8441ADA039800B49C86 /* Lato-Bold.ttf */; };
 		414EF9951ADA07550019DA57 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8451ADA039800B49C86 /* Lato-Light.ttf */; };
 		414EF9961ADA07550019DA57 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8461ADA039800B49C86 /* Lato-Regular.ttf */; };
 		414EF9971ADA07550019DA57 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41C5F8471ADA039800B49C86 /* Lato-Semibold.ttf */; };
-		0381C2741AD9CEE3004E4172 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */; };
-		03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */; };
-		03F562E61AD9FDD600A9CD3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */; };
 		418D00DD1AD949C400BE105A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00DC1AD949C400BE105A /* AppDelegate.swift */; };
 		418D00E21AD949C400BE105A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E01AD949C400BE105A /* Main.storyboard */; };
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
@@ -170,13 +170,13 @@
 		41A535BF1AD97573008B9F6F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */,
 				41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */,
 				41A535CB1AD9AC89008B9F6F /* CampaignDetailViewController.swift */,
 				0381C2731AD9CEE3004E4172 /* LoginTableViewController.swift */,
 				03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */,
 				41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */,
 				03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */,
-				41C5F83D1AD9F83100B49C86 /* BaseNavigationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

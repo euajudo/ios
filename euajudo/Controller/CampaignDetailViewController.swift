@@ -58,11 +58,16 @@ class CampaignDetailViewController: UIViewController {
         
         footerView = UIView(frame: CGRectMake(0, top, frame.size.width, footerViewHeight))
         footerView.backgroundColor = UIColor.clearColor()
-        
+
         let footerViewBackground = UIView(frame: CGRectMake(0, 0, width, footerViewHeight))
         footerViewBackground.backgroundColor = UIColor.whiteColor()
         footerViewBackground.alpha = 0.9
         footerView.addSubview(footerViewBackground)
+        
+        let footerViewSeparator = UIView(frame: CGRectMake(0, 0, width, 0.5))
+        footerViewSeparator.backgroundColor = UIColor.lightGrayColor()
+        footerViewSeparator.alpha = 0.5
+        footerView.addSubview(footerViewSeparator)
         
         let footerViewButton = UIButton(frame: CGRectMake(15, 15, width - 30, 44))
         footerViewButton.layer.cornerRadius = 5
