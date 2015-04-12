@@ -43,7 +43,7 @@ class API {
         }
     }
     
-    func isLoggedOn() -> Bool {
+    func isLogged() -> Bool {
         return API.connection.userID != nil
     }
     
