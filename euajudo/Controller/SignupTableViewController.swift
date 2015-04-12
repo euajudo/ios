@@ -37,10 +37,12 @@ class SignupTableViewController: UITableViewController {
         if self.areAllInputsValid() {
             self.startLoading()
             
-            let params = ["name": self.name.text,
-                          "email": self.email.text,
-                          "password": self.password.text,
-                          "passwordConfirmation": self.passwordConfirmation.text]
+            let params = [
+                "name": self.name.text,
+                "email": self.email.text,
+                "password": self.password.text,
+                "passwordConfirmation": self.passwordConfirmation.text
+            ]
             
             API.sharedInstance.signUpWith(params: params, completion: { (error) -> Void in
                 if let err = error {
