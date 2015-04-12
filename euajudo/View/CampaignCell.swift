@@ -12,6 +12,7 @@ class CampaignCell: UICollectionViewCell {
     
     var campaign: Campaign?
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
