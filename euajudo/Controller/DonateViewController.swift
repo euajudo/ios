@@ -32,7 +32,7 @@ class DonateViewController: UIViewController {
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = sender as? PaymentInformationsViewController {
+        if let controller = segue.destinationViewController as? PaymentInformationsViewController {
             controller.value = (textFieldValue.text as NSString).floatValue
             controller.isMonthly = isPaymentMonthly
             controller.campaign = campaign

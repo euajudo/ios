@@ -32,7 +32,12 @@ class PaymentInformationsViewController: UIViewController {
         
         unowned let weakSelf = self
         API.connection.callMethodWithName("donate", parameters: [value!, campaign!._id]) { (response, error) -> Void in
-            weakSelf.dismissViewControllerAnimated(true, completion: nil)
+            if error != nil {
+                weakSelf.buttonPayment.setTitle("EFETUAR PAGAMENTO", forState: .Normal)
+                weakSelf.activityIndicatorView.stopAnimating()
+            } else {
+                weakSelf.dismissViewControllerAnimated(true, completion: nil)
+            }
         }
     }
     
