@@ -70,7 +70,7 @@
                                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Miyagi" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-7Q-1as">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Miyagi" translatesAutoresizingMaskIntoConstraints="NO" id="mWL-7Q-1as">
                                                 <rect key="frame" x="0.0" y="75" width="600" height="320"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mWL-7Q-1as" secondAttribute="height" multiplier="15:8" id="P97-vb-ALA"/>

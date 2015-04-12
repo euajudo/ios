@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XCDYouTubeKit
 
 let footerViewHeight: CGFloat = 74
 
@@ -37,6 +38,10 @@ class CampaignDetailViewController: UIViewController {
         }
         
         createFooterView()
+        
+        // Add tap to imageView
+        let tapImageViewGesture = UITapGestureRecognizer(target: self, action: "imageViewPressed:")
+        imageView.addGestureRecognizer(tapImageViewGesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -75,6 +80,15 @@ class CampaignDetailViewController: UIViewController {
         let objectsToShare = [campaign.url]
         let activity = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         self.presentViewController(activity, animated: true, completion: nil)
+    }
+    
+    func imageViewPressed(sender: AnyObject) {
+        if campaign.mainMedia.videoUrl == nil {
+            return
+        }
+        
+        let movie = XCDYouTubeVideoPlayerViewController(videoIdentifier: campaign.mainMedia.videoUrl)
+        self.presentMoviePlayerViewControllerAnimated(movie)
     }
     
     func buttonDonatePressed(sender: AnyObject) {
