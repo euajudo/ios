@@ -51,6 +51,9 @@ class CampaignCell: UICollectionViewCell {
         self.layer.shadowOpacity = 0.2;
         self.layer.shadowPath = shadowPath.CGPath;
         self.layer.cornerRadius = 3.0;
+        
+        self.contentView.layer.cornerRadius = 1.5
+        self.contentView.clipsToBounds = true
     }
     
     func updateInformations() {
