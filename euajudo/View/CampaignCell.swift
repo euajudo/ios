@@ -18,6 +18,7 @@ class CampaignCell: UICollectionViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var playImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
@@ -67,6 +68,7 @@ class CampaignCell: UICollectionViewCell {
     func updateInformations() {
         labelTitle.text = campaign?.name
         labelDescription.text = campaign?.description
+        userName.text = campaign?.user["name"]!
         
         unowned let weakSelf = self
         campaign?.mainMedia.image({ (image) -> Void in
