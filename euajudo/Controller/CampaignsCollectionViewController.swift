@@ -27,7 +27,7 @@ class CampaignsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Register cell in collectionView
         collectionView?.registerNib(UINib(nibName: "CampaignCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: kCellCampaignIdentifier)
         
@@ -66,6 +66,13 @@ class CampaignsCollectionViewController: UICollectionViewController {
         if refreshControl.refreshing {
             reloadCampaigns()
         }
+    }
+    
+    // MARK: - Navigation
+    
+    func showAuth() {
+        let auth = self.storyboard!.instantiateViewControllerWithIdentifier("Auth") as! UINavigationController
+        self.presentViewController(auth, animated: true, completion: nil)
     }
     
 }
