@@ -88,7 +88,8 @@ class CampaignsCollectionViewController: UICollectionViewController {
     }
     
     @IBAction func buttonSettingsPressed(sender: AnyObject) {
-        
+        let nav = storyboard?.instantiateViewControllerWithIdentifier("Settings") as! UINavigationController
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
 }
