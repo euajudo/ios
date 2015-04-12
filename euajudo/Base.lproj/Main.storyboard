@@ -242,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1296" y="-344"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="QUr-y4-EK8">
             <objects>
-                <navigationController storyboardIdentifier="Donate" id="R8G-Ba-9oZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Donate" id="R8G-Ba-9oZ" customClass="BaseNavigationController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H7K-mn-UxP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -270,17 +270,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="R$ 50" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7MX-j0-ADp">
                                 <rect key="frame" x="168" y="94" width="264" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="JbB-Al-Y9y"/>
                                     <constraint firstAttribute="height" constant="131" id="iTh-Yz-zX5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
-                                <rect key="frame" x="276" y="285" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW5-Qg-mHh">
+                                <rect key="frame" x="276" y="518" width="49" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bO7-gc-oBb"/>
                                     <constraint firstAttribute="width" constant="49" id="p1r-FI-eq0"/>
@@ -288,6 +288,27 @@
                                 <state key="normal" title="Ajudar!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPaymentPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="mHH-iH-3hs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azq-nI-Jcp">
+                                <rect key="frame" x="75" y="376" width="141" height="30"/>
+                                <state key="normal" title="Ajudar mensalmente">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPaymentMonthlyPressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="Q9l-or-0Co"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-Nv-XnI">
+                                <rect key="frame" x="75" y="414" width="147" height="30"/>
+                                <state key="normal" title="Ajudar uma única vez">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPaymentOncePressed:" destination="4PO-gV-Vmc" eventType="touchUpInside" id="z1o-CW-duW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -305,15 +326,38 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonPaymentMonthly" destination="Azq-nI-Jcp" id="6kv-7P-S5T"/>
+                        <outlet property="buttonPaymentOnce" destination="QDe-Nv-XnI" id="bqq-Ao-JgY"/>
+                        <segue destination="CQd-I0-Jvv" kind="show" identifier="Payment" id="RUj-7u-TYh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mn-51-EIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1084" y="1565"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller-->
+        <scene sceneID="Nmp-HC-vh0">
+            <objects>
+                <viewController id="CQd-I0-Jvv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5K9-PS-NYU"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vx-1z-Tbj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cPa-kD-bDg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbB-ka-Cxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="1565"/>
+        </scene>
+        <!--Base Navigation Controller-->
         <scene sceneID="8NF-W6-rU4">
             <objects>
-                <navigationController id="ZHZ-a3-SPd" sceneMemberID="viewController">
+                <navigationController id="ZHZ-a3-SPd" customClass="BaseNavigationController" customModule="euajudo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="x1o-ZT-tcJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
