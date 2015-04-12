@@ -8,6 +8,7 @@
 
 import UIKit
 import XCDYouTubeKit
+import MMMarkdown
 
 let footerViewHeight: CGFloat = 74
 

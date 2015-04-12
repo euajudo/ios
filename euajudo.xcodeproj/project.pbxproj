@@ -21,6 +21,7 @@
 		418D00E41AD949C400BE105A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418D00E31AD949C400BE105A /* Images.xcassets */; };
 		418D00F31AD949C500BE105A /* euajudoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418D00F21AD949C500BE105A /* euajudoTests.swift */; };
 		419C13EE1ADA102B004E1053 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419C13EC1ADA102B004E1053 /* Launch Screen.xib */; };
+		419C13F01ADA3B68004E1053 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C13EF1ADA3B68004E1053 /* SettingsTableViewController.swift */; };
 		41A535C31AD97835008B9F6F /* CampaignsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */; };
 		41A535C51AD9783D008B9F6F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C41AD9783D008B9F6F /* API.swift */; };
 		41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A535C71AD978FC008B9F6F /* Campaign.swift */; };
@@ -61,6 +62,7 @@
 		418D00F11AD949C500BE105A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418D00F21AD949C500BE105A /* euajudoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = euajudoTests.swift; sourceTree = "<group>"; };
 		419C13ED1ADA102B004E1053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
+		419C13EF1ADA3B68004E1053 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = Controller/SettingsTableViewController.swift; sourceTree = "<group>"; };
 		41A535C21AD97835008B9F6F /* CampaignsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampaignsCollectionViewController.swift; path = Controller/CampaignsCollectionViewController.swift; sourceTree = "<group>"; };
 		41A535C41AD9783D008B9F6F /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
 		41A535C71AD978FC008B9F6F /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Campaign.swift; path = Model/Campaign.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				03F562E31AD9E3FA00A9CD3D /* SignupTableViewController.swift */,
 				41C5F83B1AD9E1A300B49C86 /* DonateViewController.swift */,
 				03F562E51AD9FDD600A9CD3D /* AuthViewController.swift */,
+				419C13EF1ADA3B68004E1053 /* SettingsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				03F562E61AD9FDD600A9CD3D /* AuthViewController.swift in Sources */,
 				41C5F83E1AD9F83100B49C86 /* BaseNavigationController.swift in Sources */,
 				41A535C81AD978FC008B9F6F /* Campaign.swift in Sources */,
+				419C13F01ADA3B68004E1053 /* SettingsTableViewController.swift in Sources */,
 				41A535CC1AD9AC89008B9F6F /* CampaignDetailViewController.swift in Sources */,
 				03F562E41AD9E3FA00A9CD3D /* SignupTableViewController.swift in Sources */,
 				41C5F83C1AD9E1A300B49C86 /* DonateViewController.swift in Sources */,
