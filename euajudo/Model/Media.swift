@@ -19,14 +19,14 @@ import SDWebImage
 
 struct Media {
     
-    var type: MediaType!
+    var type: MediaType
     var url: String!
     var videoUrl: String?
     
     private let manager = SDWebImageManager.sharedManager()
 
     init(dict: [String: AnyObject]) {
-        self.type = MediaType(rawValue: dict["type"] as! String)
+        self.type = MediaType(rawValue: dict["type"] as! String)!
         self.url = dict["url"] as! String
         
         if let video = dict["videoUrl"] as? String {

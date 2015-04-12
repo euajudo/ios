@@ -69,10 +69,18 @@
                                 <color key="textColor" red="1" green="0.30588235289999999" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="Ofe-42-mch">
+                                <rect key="frame" x="15" y="152" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Eip-nG-MQQ"/>
+                                    <constraint firstAttribute="width" constant="56" id="rUR-GR-n5e"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uMB-as-vTO" secondAttribute="trailing" id="3mc-AE-5c6"/>
+                            <constraint firstItem="Ofe-42-mch" firstAttribute="leading" secondItem="mP3-up-1ds" secondAttribute="leading" constant="15" id="72z-Ur-3wn"/>
                             <constraint firstItem="ohq-ty-pvZ" firstAttribute="leading" secondItem="mP3-up-1ds" secondAttribute="leading" constant="15" id="7ff-Tg-i75"/>
                             <constraint firstItem="Tt8-iZ-3Ko" firstAttribute="top" secondItem="PId-zn-O5g" secondAttribute="bottom" constant="10" id="Nar-6L-ij4"/>
                             <constraint firstItem="Tt8-iZ-3Ko" firstAttribute="leading" secondItem="eZy-dA-T5p" secondAttribute="trailing" id="SYY-3e-N8S"/>
@@ -83,6 +91,7 @@
                             <constraint firstItem="eZy-dA-T5p" firstAttribute="leading" secondItem="mP3-up-1ds" secondAttribute="leading" constant="15" id="gvP-Wc-3br"/>
                             <constraint firstItem="PId-zn-O5g" firstAttribute="leading" secondItem="mP3-up-1ds" secondAttribute="leading" constant="15" id="mGV-70-4Yd"/>
                             <constraint firstItem="ohq-ty-pvZ" firstAttribute="top" secondItem="uMB-as-vTO" secondAttribute="bottom" constant="20" id="mrl-7Y-Utp"/>
+                            <constraint firstItem="ohq-ty-pvZ" firstAttribute="top" secondItem="Ofe-42-mch" secondAttribute="bottom" constant="32" id="pIN-oY-MaK"/>
                             <constraint firstAttribute="trailing" secondItem="PId-zn-O5g" secondAttribute="trailing" constant="15" id="pTQ-iP-9eM"/>
                             <constraint firstItem="PId-zn-O5g" firstAttribute="top" secondItem="ohq-ty-pvZ" secondAttribute="bottom" constant="8" id="pVD-Cj-XfP"/>
                             <constraint firstItem="uMB-as-vTO" firstAttribute="leading" secondItem="mP3-up-1ds" secondAttribute="leading" id="q1j-uB-BUY"/>
@@ -104,8 +113,12 @@
                 <outlet property="imageView" destination="uMB-as-vTO" id="Tvq-Ax-HWx"/>
                 <outlet property="labelDescription" destination="PId-zn-O5g" id="nx8-n9-tgK"/>
                 <outlet property="labelTitle" destination="ohq-ty-pvZ" id="A1x-E6-iWF"/>
+                <outlet property="playImage" destination="Ofe-42-mch" id="HlZ-A9-7VM"/>
             </connections>
             <point key="canvasLocation" x="379" y="309"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Play" width="52" height="52"/>
+    </resources>
 </document>

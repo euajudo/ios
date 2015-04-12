@@ -17,6 +17,7 @@ class CampaignCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var playImage: UIImageView!
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
@@ -41,6 +42,13 @@ class CampaignCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.applyCardPattern()
+        
+        switch self.campaign!.mainMedia.type {
+        case .Image:
+            self.playImage.alpha = 0.0
+        case .Video:
+            self.playImage.alpha = 1.0
+        }
     }
     
     func applyCardPattern() {
